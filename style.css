@@ -1547,7 +1547,7 @@ footer {
     var(--bg, url('https://images.unsplash.com/photo-1448630360428-65456885c650?w=1800&q=70'));
   background-size: cover;
   background-position: center;
-  filter: blur(1.3px);
+  filter: blur(0);
   transform: scale(1.03);
   z-index: 0;
 }
@@ -1555,22 +1555,22 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.1) 45%,
-      rgba(255, 255, 255, 0.06) 100%
-    ),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='1200' height='800' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: cover, 220px 220px;
-  background-position: center, center;
-  opacity: 0.22;
-  mix-blend-mode: soft-light;
-  -webkit-backdrop-filter: blur(10px) saturate(130%);
-  backdrop-filter: blur(10px) saturate(130%);
-  filter: blur(0.4px);
+  background-color: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) contrast(105%);
+  backdrop-filter: blur(18px) saturate(140%) contrast(105%);
   z-index: 0;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .page-hero::before {
+    filter: blur(7px);
+    transform: scale(1.06);
+  }
+
+  .page-hero::after {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
 }
 .page-hero-inner {
   position: relative;
