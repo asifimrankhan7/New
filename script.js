@@ -102,8 +102,10 @@
       let tesIdx = 0;
       function initTes() {
         const track = document.getElementById("tes-track");
+        if (!track) return;
         const slides = track.querySelectorAll(".tes-slide");
         const dots = document.getElementById("tes-dots");
+        if (!dots || !slides.length) return;
         slides.forEach((_, i) => {
           const d = document.createElement("div");
           d.className = "tes-dot" + (i === 0 ? " on" : "");
@@ -144,25 +146,8 @@
       /* ===== SEARCH ACTION ===== */
       function doSearch() {
         const loc = document.getElementById("search-loc").value;
-        nav("properties");
+        window.location.href = "index.php?page=properties";
         if (loc) toast(`Searching for properties in "${loc}"`);
-      }
-
-      /* ===== NAV ===== */
-      function nav(page) {
-        document
-          .querySelectorAll(".page")
-          .forEach((p) => p.classList.remove("on"));
-        const el = document.getElementById("page-" + page);
-        if (el) {
-          el.classList.add("on");
-        }
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        if (page === "properties") {
-          propsShown = 6;
-          renderAllProps();
-        }
-        setTimeout(initReveal, 100);
       }
       function closeMob() {
         document.getElementById("mobile-menu").classList.remove("on");

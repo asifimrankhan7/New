@@ -1,13 +1,22 @@
 <?php require_once 'includes/data.php'; ?>
+<?php
+$allowedPages = [
+	'home' => 'pages/home.php',
+	'properties' => 'pages/properties.php',
+	'about' => 'pages/about.php',
+	'insights' => 'pages/insights.php',
+	'offices' => 'pages/offices.php',
+	'contact' => 'pages/contact.php',
+];
+
+$currentPage = $_GET['page'] ?? 'home';
+if (!array_key_exists($currentPage, $allowedPages)) {
+	$currentPage = 'home';
+}
+?>
 <?php include 'includes/header.php'; ?>
 
-<?php include 'pages/home.php'; ?>
-<?php include 'pages/properties.php'; ?>
-<?php include 'pages/about.php'; ?>
-<?php include 'pages/insights.php'; ?>
-<?php include 'pages/offices.php'; ?>
-<?php include 'pages/contact.php'; ?>
-<script src="script.js"></script>
+<?php include $allowedPages[$currentPage]; ?>
 </body>
 
 </html>

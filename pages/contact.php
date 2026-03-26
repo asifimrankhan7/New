@@ -1,12 +1,14 @@
     <!-- ==================== CONTACT PAGE ==================== -->
     <div id="page-contact" class="page">
-      <div class="page-hero">
-        <div class="page-hero-inner">
-          <p class="sec-eye">Get in touch</p>
-          <h1 class="serif">Contact Us</h1>
-          <p>Our team of experts is ready to assist you</p>
-        </div>
-      </div>
+      <?php
+      $hero = [
+        'variant' => 'page',
+        'eye' => 'Get in touch',
+        'title' => 'Contact Us',
+        'subtitle' => 'Our team of experts is ready to assist you',
+      ];
+      include 'includes/components/hero.php';
+      ?>
       <section>
         <div class="wrap">
           <div class="contact-grid">

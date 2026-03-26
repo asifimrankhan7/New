@@ -1,12 +1,14 @@
     <!-- ==================== OFFICES PAGE ==================== -->
     <div id="page-offices" class="page">
-      <div class="page-hero">
-        <div class="page-hero-inner">
-          <p class="sec-eye">Find us</p>
-          <h1 class="serif">Our Offices</h1>
-          <p>Over 600 offices across 52 countries worldwide</p>
-        </div>
-      </div>
+      <?php
+      $hero = [
+        'variant' => 'page',
+        'eye' => 'Find us',
+        'title' => 'Our Offices',
+        'subtitle' => 'Over 600 offices across 52 countries worldwide',
+      ];
+      include 'includes/components/hero.php';
+      ?>
       <section>
         <div class="wrap">
           <div class="sec-head reveal">
@@ -49,14 +51,7 @@
           <p style="margin-top: 10px; font-size: 13px; color: var(--gray-dark)">
             +44 (0)20 7629 8171
           </p>
-          <a
-            href="#"
-            onclick="
-              nav('contact');
-              return false;
-            "
-            >Get directions →</a
-          >
+          <a href="index.php?page=contact">Get directions →</a>
         </div>
       </div>
     </div>

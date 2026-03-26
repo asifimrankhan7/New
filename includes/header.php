@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <?php $routeBase = 'index.php?page='; ?>
   <!-- PAGE LOADER -->
   <div id="loader">
     <div class="loader-logo">
@@ -59,13 +60,13 @@
       <span class="mob-close" onclick="closeMob()">✕</span>
     </div>
     <nav class="mob-nav">
-      <a href="#" onclick="nav('home'); closeMob();">Home</a>
-      <a href="#" onclick="nav('properties'); closeMob();">For Sale</a>
-      <a href="#" onclick="nav('contact'); closeMob();">Lettings</a>
-      <a href="#" onclick="nav('about'); closeMob();">About Us</a>
-      <a href="#" onclick="nav('offices'); closeMob();">Consultant & Mentorship</a>
-      <a href="#" onclick="nav('insights'); closeMob();">Testimonial</a>
-      <a href="#" onclick="nav('contact'); closeMob();">Contact Us</a>
+      <a href="<?= $routeBase ?>home">Home</a>
+      <a href="<?= $routeBase ?>properties">For Sale</a>
+      <a href="<?= $routeBase ?>contact">Lettings</a>
+      <a href="<?= $routeBase ?>about">About Us</a>
+      <a href="<?= $routeBase ?>offices">Consultant & Mentorship</a>
+      <a href="<?= $routeBase ?>insights">Testimonial</a>
+      <a href="<?= $routeBase ?>contact">Contact Us</a>
     </nav>
   </div>
 
@@ -79,9 +80,9 @@
           <span>United Kingdom</span>
         </div>
         <div class="topbar-right">
-          <a href="#" onclick="nav('about'); return false;">About us</a>
-          <a href="#" onclick="nav('contact'); return false;">Contact us</a>
-          <a href="#" onclick="nav('about'); return false;">Careers</a>
+          <a href="<?= $routeBase ?>about">About us</a>
+          <a href="<?= $routeBase ?>contact">Contact us</a>
+          <a href="<?= $routeBase ?>about">Careers</a>
         </div>
       </div>
     </div>
@@ -89,73 +90,73 @@
     <!-- MAIN NAVBAR (Logo Section + Nav Menu) -->
     <header id="nav-top" class="header-top">
       <div class="nav-wrap">
-        <div class="nav-logo" onclick="nav('home')">
+        <a class="nav-logo" href="<?= $routeBase ?>home">
           <img src="images/logo.webp" alt="Noble Estates" />
-        </div>
+        </a>
 
         <nav class="nav-menu">
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('home')">Home</span>
+            <a class="nav-link" href="<?= $routeBase ?>home">Home</a>
           </div>
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('properties')">For Sale <span class="arr">▾</span></span>
+            <a class="nav-link" href="<?= $routeBase ?>properties">For Sale <span class="arr">▾</span></a>
             <div class="mega">
               <div class="mega-col">
                 <h4>Properties</h4>
-                <a onclick="nav('properties')">All properties</a>
-                <a onclick="nav('properties')">New build homes</a>
-                <a onclick="nav('properties')">Country houses</a>
-                <a onclick="nav('properties')">Penthouses</a>
-                <a onclick="nav('properties')">Cottages</a>
+                <a href="<?= $routeBase ?>properties">All properties</a>
+                <a href="<?= $routeBase ?>properties">New build homes</a>
+                <a href="<?= $routeBase ?>properties">Country houses</a>
+                <a href="<?= $routeBase ?>properties">Penthouses</a>
+                <a href="<?= $routeBase ?>properties">Cottages</a>
               </div>
             </div>
           </div>
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('contact')">Lettings <span class="arr">▾</span></span>
+            <a class="nav-link" href="<?= $routeBase ?>contact">Lettings <span class="arr">▾</span></a>
             <div class="mega">
               <div class="mega-col">
                 <h4>Let</h4>
-                <a onclick="nav('contact')">Long lets</a>
-                <a onclick="nav('contact')">Short lets</a>
-                <a onclick="nav('contact')">Corporate lets</a>
+                <a href="<?= $routeBase ?>contact">Long lets</a>
+                <a href="<?= $routeBase ?>contact">Short lets</a>
+                <a href="<?= $routeBase ?>contact">Corporate lets</a>
               </div>
             </div>
           </div>
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('about')">About Us <span class="arr">▾</span></span>
+            <a class="nav-link" href="<?= $routeBase ?>about">About Us <span class="arr">▾</span></a>
             <div class="mega">
               <div class="mega-col">
                 <h4>Discover</h4>
-                <a onclick="nav('about')">Our History</a>
-                <a onclick="nav('about')">Our Team</a>
-                <a onclick="nav('about')">Sustainability</a>
+                <a href="<?= $routeBase ?>about">Our History</a>
+                <a href="<?= $routeBase ?>about">Our Team</a>
+                <a href="<?= $routeBase ?>about">Sustainability</a>
               </div>
             </div>
           </div>
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('offices')">Consultant & Mentorship <span class="arr">▾</span></span>
+            <a class="nav-link" href="<?= $routeBase ?>offices">Consultant & Mentorship <span class="arr">▾</span></a>
             <div class="mega">
               <div class="mega-col">
                 <h4>Programs</h4>
-                <a onclick="nav('offices')">Real Estate Mentorship</a>
-                <a onclick="nav('offices')">Investment Consulting</a>
-                <a onclick="nav('offices')">Career Guidance</a>
+                <a href="<?= $routeBase ?>offices">Real Estate Mentorship</a>
+                <a href="<?= $routeBase ?>offices">Investment Consulting</a>
+                <a href="<?= $routeBase ?>offices">Career Guidance</a>
               </div>
             </div>
           </div>
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('insights')">Testimonial <span class="arr">▾</span></span>
+            <a class="nav-link" href="<?= $routeBase ?>insights">Testimonial <span class="arr">▾</span></a>
             <div class="mega">
               <div class="mega-col">
                 <h4>Client Stories</h4>
-                <a onclick="nav('insights')">Buyer Reviews</a>
-                <a onclick="nav('insights')">Seller Experiences</a>
-                <a onclick="nav('insights')">Landlord Feedback</a>
+                <a href="<?= $routeBase ?>insights">Buyer Reviews</a>
+                <a href="<?= $routeBase ?>insights">Seller Experiences</a>
+                <a href="<?= $routeBase ?>insights">Landlord Feedback</a>
               </div>
             </div>
           </div>
           <div class="nav-item">
-            <span class="nav-link" onclick="nav('contact')">Contact Us</span>
+            <a class="nav-link" href="<?= $routeBase ?>contact">Contact Us</a>
           </div>
         </nav>
 
@@ -169,6 +170,6 @@
   </div>
 
   <!-- FLOATING CTA -->
-  <div class="floating-cta" onclick="nav('contact')">
+  <a class="floating-cta" href="<?= $routeBase ?>contact">
     Request Valuation
-  </div>
+  </a>

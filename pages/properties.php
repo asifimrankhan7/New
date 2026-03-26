@@ -1,17 +1,15 @@
     <!-- ==================== PROPERTIES PAGE ==================== -->
     <div id="page-properties" class="page">
-      <div
-        class="page-hero"
-        style="
-          --bg: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=50');
-        "
-      >
-        <div class="page-hero-inner">
-          <p class="sec-eye">Browse</p>
-          <h1 class="serif">Properties for Sale & Rent</h1>
-          <p>Exclusively curated homes across London, the country and beyond</p>
-        </div>
-      </div>
+      <?php
+      $hero = [
+        'variant' => 'page',
+        'eye' => 'Browse',
+        'title' => 'Properties for Sale & Rent',
+        'subtitle' => 'Exclusively curated homes across London, the country and beyond',
+        'bg_image' => 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=50',
+      ];
+      include 'includes/components/hero.php';
+      ?>
       <div class="filter-bar">
         <div class="wrap">
           <div class="filter-row">

@@ -33,8 +33,8 @@
             <i data-lucide="map-pin" style="color: #666; width: 18px; height: 18px;"></i>
             <input type="text" id="search-loc" placeholder="Search by county, town or city" />
           </div>
-          <button class="btn-kf" onclick="nav('properties')">Buy</button>
-          <button class="btn-kf" onclick="nav('properties')">Rent</button>
+          <a class="btn-kf" href="index.php?page=properties">Buy</a>
+          <a class="btn-kf" href="index.php?page=properties">Rent</a>
         </div>
       </div>
     </div>
@@ -99,9 +99,9 @@
         <?php endforeach; ?>
       </div>
       <div style="text-align: center; margin-top: 38px" class="reveal">
-        <button class="btn-outline" onclick="nav('properties')">
+        <a class="btn-outline" href="index.php?page=properties">
           View all properties
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -122,12 +122,12 @@
         the best possible result for you.
       </p>
       <div class="btn-row">
-        <button class="btn-dark" onclick="nav('contact')">
+        <a class="btn-dark" href="index.php?page=contact">
           Arrange a valuation
-        </button>
-        <button class="btn-outline" onclick="nav('contact')">
+        </a>
+        <a class="btn-outline" href="index.php?page=contact">
           Sell with us
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -192,7 +192,7 @@
             Market-leading research and analysis to help you make informed
             property decisions, backed by decades of data.
           </p>
-          <span class="svc-link" onclick="nav('insights')">View insights →</span>
+          <a class="svc-link" href="index.php?page=insights">View insights →</a>
         </div>
       </div>
     </div>
@@ -210,9 +210,9 @@
         selling of country properties. From Cotswold manors to Scottish
         estates, we know every corner of the British countryside.
       </p>
-      <button class="btn-outline light" onclick="nav('properties')">
+      <a class="btn-outline light" href="index.php?page=properties">
         Explore country homes
-      </button>
+      </a>
     </div>
     <div class="split-media reveal-r">
       <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Country estate"
@@ -267,9 +267,9 @@
         <?php endforeach; ?>
       </div>
       <div style="text-align: center; margin-top: 38px" class="reveal">
-        <button class="btn-outline" onclick="nav('insights')">
+        <a class="btn-outline" href="index.php?page=insights">
           All insights & research
-        </button>
+        </a>
       </div>
     </div>
   </section>

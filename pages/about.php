@@ -1,15 +1,14 @@
     <!-- ==================== ABOUT PAGE ==================== -->
     <div id="page-about" class="page">
-      <div class="page-hero">
-        <div class="page-hero-inner">
-          <p class="sec-eye">Our story</p>
-          <h1 class="serif">About Noble Estates</h1>
-          <p>
-            Serving discerning clients across the UK and globe for over a
-            century
-          </p>
-        </div>
-      </div>
+      <?php
+      $hero = [
+        'variant' => 'page',
+        'eye' => 'Our story',
+        'title' => 'About Noble Estates',
+        'subtitle' => 'Serving discerning clients across the UK and globe for over a century',
+      ];
+      include 'includes/components/hero.php';
+      ?>
       <section>
         <div class="wrap">
           <div class="split" style="gap: 60px; align-items: center">
@@ -148,9 +147,9 @@
             best for our clients. This structure has kept us at the forefront of
             the industry for more than 127 years.
           </p>
-          <button class="btn-dark" onclick="nav('contact')">
+          <a class="btn-dark" href="index.php?page=contact">
             Get in touch
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 <!-- ==================== INSIGHTS PAGE ==================== -->
 <div id="page-insights" class="page">
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <p class="sec-eye">Intelligence</p>
-      <h1 class="serif">Research & Insights</h1>
-      <p>Award-winning market analysis and property intelligence</p>
-    </div>
-  </div>
+  <?php
+  $hero = [
+    'variant' => 'page',
+    'eye' => 'Intelligence',
+    'title' => 'Research & Insights',
+    'subtitle' => 'Award-winning market analysis and property intelligence',
+  ];
+  include 'includes/components/hero.php';
+  ?>
   <section>
     <div class="wrap">
       <div class="sec-head reveal">
