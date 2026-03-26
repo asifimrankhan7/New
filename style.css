@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 :root {
+  --primary: #1d3053;
   --black: #0f0e0d;
   --white: #ffffff;
   --cream: #f7f4ef;
@@ -76,7 +77,7 @@ ul {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: var(--black);
+  background: var(--primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,13 +133,15 @@ ul {
   background: transparent;
   display: flex;
   align-items: center;
-  transition: background 0.4s var(--ease), border 0.4s var(--ease);
+  transition:
+    background 0.4s var(--ease),
+    border 0.4s var(--ease);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .header-unit.visible .topbar,
 .header-unit.scrolled .topbar {
   background: var(--black);
-  border-bottom-color: rgba(255,255,255,0.05);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 .topbar .wrap {
   display: flex;
@@ -160,7 +163,7 @@ ul {
 }
 .header-unit.visible .topbar-left,
 .header-unit.scrolled .topbar-left {
-  color: #888;
+  color: #dddddd;
 }
 .topbar-left svg {
   flex-shrink: 0;
@@ -176,12 +179,14 @@ ul {
   color: rgba(255, 255, 255, 0.6);
   padding: 0 14px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  transition: color 0.4s, border 0.4s;
+  transition:
+    color 0.4s,
+    border 0.4s;
   white-space: nowrap;
 }
 .header-unit.visible .topbar-right a,
 .header-unit.scrolled .topbar-right a {
-  color: #888;
+  color: #dddddd;
   border-right-color: #2a2a2a;
 }
 .topbar-right a:first-child {
@@ -203,17 +208,20 @@ ul {
   width: 100%;
   z-index: 1000;
   transition: transform 0.4s var(--ease);
+  backdrop-filter: blur(12px);
 }
 .header-top {
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.4s var(--ease), border 0.4s var(--ease);
+  transition:
+    background 0.4s var(--ease),
+    border 0.4s var(--ease);
 }
 .header-unit.visible .header-top,
 .header-unit.scrolled .header-top {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 .nav-wrap {
   display: flex;
@@ -225,14 +233,39 @@ ul {
 }
 .nav-logo {
   margin-right: 48px;
+  height: 100%;
   flex-shrink: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
+  position: relative;
 }
+.nav-logo::before {
+  content: "";
+  position: absolute;
+  top:0;
+  right: 0;
+  height: calc(100% + 1px);
+  width: 2000px;
+  background-color: var(--primary);
+}
+.nav-logo::after {
+  content: "";
+  position: absolute;
+  top:0;
+  right: 0;
+  height: calc(100% + 1px);
+  width: 20px;
+  background-color: var(--primary);
+  transform: translateX(calc(100% - 1px));
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
 .nav-logo img {
   height: 56px;
   width: auto;
+  position: static;
+  z-index: 9999;
 }
 .nav-menu {
   display: flex;
@@ -253,11 +286,13 @@ ul {
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--white);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition:
+    color 0.3s,
+    text-shadow 0.3s;
 }
 .header-unit.visible .nav-link,
 .header-unit.scrolled .nav-link {
@@ -1601,8 +1636,11 @@ footer {
   cursor: pointer;
   z-index: 9999;
   text-transform: uppercase;
-  transition: background-color 0.3s, padding 0.3s, opacity 0.3s;
-  box-shadow: -2px 0 12px rgba(0,0,0,0.1);
+  transition:
+    background-color 0.3s,
+    padding 0.3s,
+    opacity 0.3s;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1610,7 +1648,7 @@ footer {
 }
 .floating-cta:hover {
   background-color: rgba(11, 46, 89, 1); /* Solid Navy Blue */
-  box-shadow: -4px 0 20px rgba(0,0,0,0.25);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.25);
   padding: 28px 14px;
 }
 
@@ -1698,7 +1736,7 @@ footer {
     width: 100% !important;
     border-radius: 4px !important;
     overflow: hidden !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
     flex: none !important; /* Prevent it from being crushed */
     display: flex !important;
     align-items: center !important;
@@ -1786,7 +1824,7 @@ footer {
   .footer-bot a {
     margin: 0 10px;
   }
-  
+
   .floating-cta {
     display: none !important;
   }
@@ -2054,7 +2092,6 @@ footer {
   transform: translateX(-50%) translateY(0);
 }
 
-
 /* ===================== LOGIN PAGE ===================== */
 
 /* ===================== LOGIN PAGE ===================== */
@@ -2096,7 +2133,7 @@ footer {
   padding: 10px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 .login-card-inner {
   border: 1px solid var(--gold2);
