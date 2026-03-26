@@ -1,0 +1,1271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Noble Estates | London & UK Luxury Property Experts</title>
+    <meta
+      name="description"
+      content="Noble Estates — London's premier luxury estate agency. Find exclusive properties for sale and rent across the UK and worldwide."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- PAGE LOADER -->
+    <div id="loader">
+      <div class="loader-logo">
+        <img src="images/logo.webp" alt="Noble Estates" />
+      </div>
+      <div class="loader-bar"></div>
+      <div class="loader-text">Curating your experience</div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie">
+      <p>
+        We use cookies to improve your experience and analyse site usage. By
+        continuing, you accept our <a href="#">Cookie Policy</a> and
+        <a href="#">Privacy Policy</a>.
+      </p>
+      <div style="display: flex; flex-shrink: 0">
+        <button id="cookie-decline">Decline</button>
+        <button id="cookie-accept">Accept all</button>
+      </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <div
+      id="btt"
+      title="Back to top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu">
+      <div class="mob-head">
+        <span class="mob-logo"
+          ><img src="images/logo.webp" alt="Noble Estates"
+        /></span>
+        <span class="mob-close" onclick="closeMob()">✕</span>
+      </div>
+      <nav class="mob-nav">
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Home</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >For Sale</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Lettings</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >About Us</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Consultant & Mentorship</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Testimonial</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Contact Us</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Careers</a
+        >
+        <a
+          href="#"
+          onclick="
+            nav('properties');
+            closeMob();
+          "
+          >Sign In</a
+        >
+      </nav>
+    </div>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="wrap">
+        <div class="topbar-left">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"
+            />
+          </svg>
+          <span>United Kingdom</span>
+        </div>
+        <div class="topbar-right">
+          <a
+            href="#"
+            onclick="
+              nav('about');
+              return false;
+            "
+            >About us</a
+          >
+          <a
+            href="#"
+            onclick="
+              nav('contact');
+              return false;
+            "
+            >Contact us</a
+          >
+          <a href="#">Careers</a>
+          <a href="#">Sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header id="nav">
+      <div class="nav-wrap">
+        <div class="nav-logo" onclick="nav('home')">
+          <img src="images/logo.webp" alt="Noble Estates" />
+        </div>
+        <nav class="nav-menu">
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')">Home</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')"
+              >For Sale <span class="arr">▾</span></span
+            >
+            <div class="mega">
+              <div class="mega-col">
+                <h4>For sale</h4>
+                <a onclick="nav('properties')">All properties</a
+                ><a onclick="nav('properties')">New build homes</a
+                ><a onclick="nav('properties')">Country houses</a
+                ><a onclick="nav('properties')">Period homes</a
+                ><a onclick="nav('properties')">Penthouses</a
+                ><a onclick="nav('properties')">Cottages</a>
+              </div>
+              <div class="mega-col">
+                <h4>For rent</h4>
+                <a onclick="nav('properties')">Long lets</a
+                ><a onclick="nav('properties')">Short lets</a
+                ><a onclick="nav('properties')">Super-prime lettings</a
+                ><a onclick="nav('properties')">Corporate lets</a>
+              </div>
+              <div class="mega-col">
+                <h4>Top features</h4>
+                <a onclick="nav('properties')">Swimming pool</a
+                ><a onclick="nav('properties')">Coastal</a
+                ><a onclick="nav('properties')">Village</a
+                ><a onclick="nav('properties')">With land</a
+                ><a onclick="nav('properties')">Thameside</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')"
+              >Lettings <span class="arr">▾</span></span
+            >
+            <div class="mega">
+              <div class="mega-col">
+                <h4>Sell</h4>
+                <a onclick="nav('properties')">Arrange a valuation</a
+                ><a onclick="nav('properties')">Sell with us</a
+                ><a onclick="nav('properties')">Super prime sales</a
+                ><a onclick="nav('properties')">Country & estates</a>
+              </div>
+              <div class="mega-col">
+                <h4>Let</h4>
+                <a onclick="nav('properties')">Let with us</a
+                ><a onclick="nav('properties')">Super-prime lettings</a
+                ><a onclick="nav('properties')">Short lettings</a>
+              </div>
+              <div class="mega-col">
+                <h4>International</h4>
+                <a onclick="nav('properties')">Global reach</a
+                ><a onclick="nav('properties')">International properties</a
+                ><a onclick="nav('properties')">Overseas buying guide</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')"
+              >About Us <span class="arr">▾</span></span
+            >
+            <div class="mega">
+              <div class="mega-col">
+                <h4>Buyer &amp; seller</h4>
+                <a onclick="nav('properties')">Buying services</a
+                ><a onclick="nav('properties')">Selling services</a
+                ><a onclick="nav('properties')">Homeowner services</a
+                ><a onclick="nav('properties')">Valuations</a>
+              </div>
+              <div class="mega-col">
+                <h4>Landlord &amp; tenant</h4>
+                <a onclick="nav('properties')">Landlord services</a
+                ><a onclick="nav('properties')">Tenant services</a
+                ><a onclick="nav('properties')">Short lets</a
+                ><a onclick="nav('properties')">Property management</a>
+              </div>
+              <div class="mega-col">
+                <h4>Specialist</h4>
+                <a onclick="nav('properties')">Rural consultancy</a
+                ><a onclick="nav('properties')">Interior design</a
+                ><a onclick="nav('properties')">Mortgages &amp; finance</a
+                ><a onclick="nav('properties')">Planning</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')"
+              >Consultant &amp; Mentorship <span class="arr">▾</span></span
+            >
+            <div class="mega">
+              <div class="mega-col">
+                <h4>Find us</h4>
+                <a onclick="nav('properties')">Find an expert</a
+                ><a onclick="nav('properties')">Find an office</a>
+              </div>
+              <div class="mega-col">
+                <h4>London</h4>
+                <a onclick="nav('properties')">Battersea</a
+                ><a onclick="nav('properties')">Chelsea</a
+                ><a onclick="nav('properties')">Fulham</a
+                ><a onclick="nav('properties')">Islington</a
+                ><a onclick="nav('properties')">Notting Hill</a>
+              </div>
+              <div class="mega-col">
+                <h4>Country</h4>
+                <a onclick="nav('properties')">Bath</a
+                ><a onclick="nav('properties')">Cambridge</a
+                ><a onclick="nav('properties')">Oxford</a
+                ><a onclick="nav('properties')">Windsor</a
+                ><a onclick="nav('properties')">Yorkshire</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')"
+              >Testimonial <span class="arr">▾</span></span
+            >
+            <div class="mega">
+              <div class="mega-col">
+                <h4>Market insights</h4>
+                <a onclick="nav('properties')">Research</a
+                ><a onclick="nav('properties')">Perspectives</a
+                ><a onclick="nav('properties')">The View</a>
+              </div>
+              <div class="mega-col">
+                <h4>Reports</h4>
+                <a onclick="nav('properties')">The Wealth Report</a
+                ><a onclick="nav('properties')">UK Cities DNA</a
+                ><a onclick="nav('properties')">The Alpine Report</a
+                ><a onclick="nav('properties')">Rural Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link" onclick="nav('properties')">Contact Us</span>
+          </div>
+        </nav>
+        <div class="nav-right">
+          <span class="nav-icon-btn" id="nav-search-btn">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Search
+          </span>
+          <button class="nav-cta-btn" onclick="nav('contact')">
+            Free Valuation
+          </button>
+          <div
+            class="nav-hamburger"
+            onclick="document.getElementById('mobile-menu').classList.add('on')"
+          >
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <div id="page-home" class="page on">
+      <!-- VIDEO HERO -->
+      <div class="hero">
+        <div class="hero-video-wrap">
+          <!-- Fallback: free Pexels embed via iframe alternative using direct mp4 links -->
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=60"
+          >
+            <source src="Vidio.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Luxury property specialists since 1896</p>
+          <h1 class="hero-title serif">
+            Discover Your<br /><em>Dream Home</em>
+          </h1>
+          <p class="hero-sub">
+            From elegant London apartments to grand country estates
+          </p>
+          <div class="hero-search">
+            <div class="search-tabs">
+              <span class="stab on" data-tab="sale">For Sale</span>
+              <span class="stab" data-tab="rent">To Rent</span>
+              <span class="stab" data-tab="new">New Homes</span>
+              <span class="stab" data-tab="commercial">Commercial</span>
+            </div>
+            <div class="search-row">
+              <input
+                type="text"
+                id="search-loc"
+                placeholder="Location, postcode or area…"
+              />
+              <select id="search-type">
+                <option value="">All types</option>
+                <option>Apartment</option>
+                <option>House</option>
+                <option>Cottage</option>
+                <option>Penthouse</option>
+                <option>Country house</option>
+                <option>Farmhouse</option>
+              </select>
+              <select id="search-beds">
+                <option value="">Any beds</option>
+                <option>1+ beds</option>
+                <option>2+ beds</option>
+                <option>3+ beds</option>
+                <option>4+ beds</option>
+                <option>5+ beds</option>
+              </select>
+              <button class="search-go" onclick="doSearch()">Search</button>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-hint">
+          <svg
+            width="18"
+            height="24"
+            viewBox="0 0 18 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <rect x="1" y="1" width="16" height="22" rx="8" />
+            <line x1="9" y1="6" x2="9" y2="10" />
+          </svg>
+          <span>Scroll</span>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-band">
+        <div class="stats-inner">
+          <div class="stat-cell">
+            <span class="stat-num serif" data-count="600">0</span
+            ><span class="stat-lbl">Global Offices</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num serif" data-count="52">0</span
+            ><span class="stat-lbl">Countries</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num serif" data-count="20000">0</span
+            ><span class="stat-lbl">Professionals</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num serif" data-count="127">0</span
+            ><span class="stat-lbl">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED PROPERTIES -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">Curated selection</p>
+            <h2 class="sec-title serif">Featured Properties</h2>
+            <p class="sec-sub">
+              Handpicked homes across the country's finest locations
+            </p>
+          </div>
+          <div class="props-grid" id="featured-props"></div>
+          <div style="text-align: center; margin-top: 38px" class="reveal">
+            <button class="btn-outline" onclick="nav('properties')">
+              View all properties
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPLIT: SELL WITH US -->
+      <div class="split reveal-l">
+        <div class="split-media">
+          <img
+            src="https://images.unsplash.com/photo-1560184897-502a475f7a0d?w=900&q=80"
+            alt="Luxury interior"
+            loading="lazy"
+          />
+        </div>
+        <div class="split-content">
+          <p class="split-eye">Sell or let with us</p>
+          <h2 class="split-title serif">Local experts.<br />Global reach.</h2>
+          <p class="split-body">
+            Our network of more than 600 offices worldwide means your property
+            receives unparalleled exposure. From discreet private sales to
+            flagship marketing campaigns, we tailor every instruction to achieve
+            the best possible result for you.
+          </p>
+          <div class="btn-row">
+            <button class="btn-dark" onclick="nav('contact')">
+              Arrange a valuation
+            </button>
+            <button class="btn-outline" onclick="nav('contact')">
+              Sell with us
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <section class="sec-cream">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">What we offer</p>
+            <h2 class="sec-title serif">Our Services</h2>
+          </div>
+          <div class="services-grid">
+            <div class="svc-card reveal">
+              <svg
+                class="svc-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="var(--gold)"
+                stroke-width="1.2"
+              >
+                <path d="M24 4L4 20v24h14V30h12v14h14V20z" />
+              </svg>
+              <h3 class="svc-title serif">Buying</h3>
+              <p class="svc-text">
+                Expert guidance from search to completion. We help you find the
+                right home at the right price in the right location.
+              </p>
+              <span class="svc-link">Buying services →</span>
+            </div>
+            <div class="svc-card reveal">
+              <svg
+                class="svc-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="var(--gold)"
+                stroke-width="1.2"
+              >
+                <rect x="8" y="16" width="32" height="26" rx="1" />
+                <path d="M16 16V12a8 8 0 0 1 16 0v4" />
+                <line x1="24" y1="25" x2="24" y2="33" />
+                <line x1="20" y1="29" x2="28" y2="29" />
+              </svg>
+              <h3 class="svc-title serif">Selling</h3>
+              <p class="svc-text">
+                From valuation to handover of keys, our award-winning sales team
+                delivers outstanding results for every instruction.
+              </p>
+              <span class="svc-link">Selling services →</span>
+            </div>
+            <div class="svc-card reveal">
+              <svg
+                class="svc-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="var(--gold)"
+                stroke-width="1.2"
+              >
+                <circle cx="24" cy="18" r="9" />
+                <path d="M8 44c0-8.837 7.163-16 16-16s16 7.163 16 16" />
+              </svg>
+              <h3 class="svc-title serif">Landlord services</h3>
+              <p class="svc-text">
+                Comprehensive property management, tenant finding and rent
+                collection services for landlords across the UK.
+              </p>
+              <span class="svc-link">Landlord services →</span>
+            </div>
+            <div class="svc-card reveal">
+              <svg
+                class="svc-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="var(--gold)"
+                stroke-width="1.2"
+              >
+                <rect x="8" y="8" width="32" height="32" rx="2" />
+                <path d="M16 24l6 6 10-12" />
+              </svg>
+              <h3 class="svc-title serif">Tenant services</h3>
+              <p class="svc-text">
+                We work to understand exactly what you're looking for, matching
+                you to properties that truly meet your needs.
+              </p>
+              <span class="svc-link">Tenant services →</span>
+            </div>
+            <div class="svc-card reveal">
+              <svg
+                class="svc-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="var(--gold)"
+                stroke-width="1.2"
+              >
+                <circle cx="24" cy="24" r="16" />
+                <path d="M24 14v10l7 4" />
+              </svg>
+              <h3 class="svc-title serif">Valuations</h3>
+              <p class="svc-text">
+                Accurate, independent valuations for all purposes — residential,
+                commercial, rural and specialist properties.
+              </p>
+              <span class="svc-link">Valuation services →</span>
+            </div>
+            <div class="svc-card reveal">
+              <svg
+                class="svc-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="var(--gold)"
+                stroke-width="1.2"
+              >
+                <path d="M10 38l10-10 8 8 14-18" />
+                <circle cx="24" cy="12" r="5" />
+              </svg>
+              <h3 class="svc-title serif">Research & insights</h3>
+              <p class="svc-text">
+                Market-leading research and analysis to help you make informed
+                property decisions, backed by decades of data.
+              </p>
+              <span class="svc-link" onclick="nav('insights')"
+                >View insights →</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPLIT: COUNTRY DARK -->
+      <div class="split">
+        <div class="split-content sec-dark reveal-l">
+          <p class="split-eye">Rural & country</p>
+          <h2 class="split-title serif" style="color: var(--white)">
+            Country Houses,<br />Farms & Estates
+          </h2>
+          <p class="split-body" style="color: rgba(255, 255, 255, 0.5)">
+            Our dedicated rural team has unrivalled expertise in the buying and
+            selling of country properties. From Cotswold manors to Scottish
+            estates, we know every corner of the British countryside.
+          </p>
+          <button class="btn-outline light" onclick="nav('properties')">
+            Explore country homes
+          </button>
+        </div>
+        <div class="split-media reveal-r">
+          <img
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80"
+            alt="Country estate"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">Our portfolio</p>
+            <h2 class="sec-title serif">Exceptional Properties</h2>
+            <p class="sec-sub">
+              A glimpse into the extraordinary homes we represent
+            </p>
+          </div>
+        </div>
+        <div class="gallery" id="gallery-grid"></div>
+      </section>
+
+      <!-- INSIGHTS -->
+      <section class="sec-cream">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">Market intelligence</p>
+            <h2 class="sec-title serif">Latest Insights</h2>
+            <p class="sec-sub">
+              Stay ahead with our award-winning research and editorial content
+            </p>
+          </div>
+          <div class="insights-grid" id="home-insights"></div>
+          <div style="text-align: center; margin-top: 38px" class="reveal">
+            <button class="btn-outline" onclick="nav('insights')">
+              All insights & research
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="sec-dark">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="sec-eye" style="color: var(--gold)">Client stories</p>
+            <h2 class="sec-title serif" style="color: var(--white)">
+              What Our Clients Say
+            </h2>
+          </div>
+          <div class="testimonials-slider">
+            <div class="tes-track" id="tes-track">
+              <div class="tes-slide">
+                <p class="tes-quote">
+                  "Noble Estates found us our dream home in the Cotswolds within
+                  three weeks. Their attention to detail and understanding of
+                  exactly what we needed was extraordinary."
+                </p>
+                <p class="tes-author">
+                  — Charles & Arabella Windsor, Gloucestershire
+                </p>
+              </div>
+              <div class="tes-slide">
+                <p class="tes-quote">
+                  "From valuation to completion, the team handled everything
+                  with the utmost professionalism. We achieved a price beyond
+                  our expectations."
+                </p>
+                <p class="tes-author">— James Harrington, Chelsea London</p>
+              </div>
+              <div class="tes-slide">
+                <p class="tes-quote">
+                  "Their international network is genuinely impressive. They
+                  connected us with a buyer from Singapore who paid asking price
+                  in under a fortnight."
+                </p>
+                <p class="tes-author">— Victoria St. Claire, Belgravia</p>
+              </div>
+              <div class="tes-slide">
+                <p class="tes-quote">
+                  "The lettings team has managed our London portfolio for six
+                  years. Meticulous, responsive and always putting our interests
+                  first."
+                </p>
+                <p class="tes-author">— David & Clare Pemberton, Kensington</p>
+              </div>
+            </div>
+            <div class="tes-dots" id="tes-dots"></div>
+            <div class="tes-arrows">
+              <div class="tes-arrow" onclick="tesPrev()">‹</div>
+              <div class="tes-arrow" onclick="tesNext()">›</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section
+        class="sec-dark"
+        style="padding-top: 0; border-top: 1px solid #1e1e1e"
+      >
+        <div class="wrap">
+          <div class="newsletter-wrap reveal">
+            <p class="sec-eye" style="color: var(--gold)">Stay informed</p>
+            <h2 class="sec-title serif" style="color: var(--white)">
+              Property & Market Updates
+            </h2>
+            <p class="sec-sub" style="color: rgba(255, 255, 255, 0.45)">
+              Receive curated insights, new listings and market commentary
+              direct to your inbox
+            </p>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                id="nl-email"
+                placeholder="Your email address"
+              />
+              <button onclick="subscribe()">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /home -->
+
+    <!-- ==================== PROPERTIES PAGE ==================== -->
+    <div id="page-properties" class="page">
+      <div
+        class="page-hero"
+        style="
+          --bg: url(&quot;https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=50&quot;);
+        "
+      >
+        <div class="page-hero-inner">
+          <p class="sec-eye">Browse</p>
+          <h1 class="serif">Properties for Sale & Rent</h1>
+          <p>Exclusively curated homes across London, the country and beyond</p>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <div class="wrap">
+          <div class="filter-row">
+            <select class="filter-sel" id="f-status">
+              <option value="">For Sale</option>
+              <option>To Rent</option>
+              <option>New Homes</option>
+            </select>
+            <select class="filter-sel" id="f-type">
+              <option value="">All types</option>
+              <option>Apartment</option>
+              <option>House</option>
+              <option>Cottage</option>
+              <option>Penthouse</option>
+              <option>Country house</option>
+            </select>
+            <select class="filter-sel" id="f-price">
+              <option value="">Any price</option>
+              <option>Up to £500k</option>
+              <option>Up to £1m</option>
+              <option>Up to £2.5m</option>
+              <option>Up to £5m</option>
+              <option>£5m+</option>
+            </select>
+            <select class="filter-sel" id="f-beds">
+              <option value="">Any beds</option>
+              <option>1+</option>
+              <option>2+</option>
+              <option>3+</option>
+              <option>4+</option>
+              <option>5+</option>
+            </select>
+            <select class="filter-sel" id="f-loc">
+              <option value="">All locations</option>
+              <option>London</option>
+              <option>South East</option>
+              <option>South West</option>
+              <option>Midlands</option>
+              <option>Scotland</option>
+            </select>
+            <button class="filter-btn" onclick="renderAllProps()">
+              Update
+            </button>
+            <span class="filter-count" id="f-count">Showing 12 properties</span>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="props-grid" id="all-props"></div>
+          <div style="text-align: center; margin-top: 44px">
+            <button class="btn-outline" id="load-more" onclick="loadMore()">
+              Load more properties
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== ABOUT PAGE ==================== -->
+    <div id="page-about" class="page">
+      <div class="page-hero">
+        <div class="page-hero-inner">
+          <p class="sec-eye">Our story</p>
+          <h1 class="serif">About Noble Estates</h1>
+          <p>
+            Serving discerning clients across the UK and globe for over a
+            century
+          </p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="split" style="gap: 60px; align-items: center">
+            <div class="reveal-l">
+              <p class="split-eye">Our heritage</p>
+              <h2 class="split-title serif">
+                A legacy of<br />trusted expertise
+              </h2>
+              <p class="split-body">
+                Founded in London in 1896, Noble Estates has grown from a single
+                Mayfair office to a global firm spanning 52 countries and 600+
+                offices. Our independence — we remain a partnership — means our
+                interests are always aligned with our clients.
+              </p>
+              <p class="split-body">
+                We combine deep local knowledge with an international
+                perspective to help clients make the right property decisions,
+                whether buying their first home or managing a vast portfolio.
+              </p>
+            </div>
+            <div
+              class="reveal-r"
+              style="background: var(--cream); padding: 44px"
+            >
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 32px;
+                  text-align: center;
+                "
+              >
+                <div>
+                  <span
+                    class="stat-num serif"
+                    style="color: var(--gold); font-size: 44px; display: block"
+                    >127</span
+                  ><span
+                    class="stat-lbl"
+                    style="
+                      color: var(--gray-dark);
+                      letter-spacing: 0.12em;
+                      font-size: 10px;
+                      text-transform: uppercase;
+                    "
+                    >Years in business</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="stat-num serif"
+                    style="color: var(--gold); font-size: 44px; display: block"
+                    >600+</span
+                  ><span
+                    class="stat-lbl"
+                    style="
+                      color: var(--gray-dark);
+                      letter-spacing: 0.12em;
+                      font-size: 10px;
+                      text-transform: uppercase;
+                    "
+                    >Global offices</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="stat-num serif"
+                    style="color: var(--gold); font-size: 44px; display: block"
+                    >52</span
+                  ><span
+                    class="stat-lbl"
+                    style="
+                      color: var(--gray-dark);
+                      letter-spacing: 0.12em;
+                      font-size: 10px;
+                      text-transform: uppercase;
+                    "
+                    >Countries</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="stat-num serif"
+                    style="color: var(--gold); font-size: 44px; display: block"
+                    >20k+</span
+                  ><span
+                    class="stat-lbl"
+                    style="
+                      color: var(--gray-dark);
+                      letter-spacing: 0.12em;
+                      font-size: 10px;
+                      text-transform: uppercase;
+                    "
+                    >Professionals</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-cream">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">Our people</p>
+            <h2 class="sec-title serif">Leadership Team</h2>
+          </div>
+          <div class="team-grid" id="team-grid"></div>
+        </div>
+      </section>
+      <div class="split">
+        <div class="split-media reveal-l">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80"
+            alt="Office interior"
+            loading="lazy"
+          />
+        </div>
+        <div class="split-content reveal-r">
+          <p class="split-eye">Our values</p>
+          <h2 class="split-title serif">
+            Partnership.<br />Integrity. Excellence.
+          </h2>
+          <p class="split-body">
+            As an independent partnership, we are free from external
+            shareholders. Every decision we make is guided purely by what is
+            best for our clients. This structure has kept us at the forefront of
+            the industry for more than 127 years.
+          </p>
+          <button class="btn-dark" onclick="nav('contact')">
+            Get in touch
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== INSIGHTS PAGE ==================== -->
+    <div id="page-insights" class="page">
+      <div class="page-hero">
+        <div class="page-hero-inner">
+          <p class="sec-eye">Intelligence</p>
+          <h1 class="serif">Research & Insights</h1>
+          <p>Award-winning market analysis and property intelligence</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">Latest</p>
+            <h2 class="sec-title serif">Market Reports</h2>
+          </div>
+          <div class="insights-grid" id="all-insights"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== OFFICES PAGE ==================== -->
+    <div id="page-offices" class="page">
+      <div class="page-hero">
+        <div class="page-hero-inner">
+          <p class="sec-eye">Find us</p>
+          <h1 class="serif">Our Offices</h1>
+          <p>Over 600 offices across 52 countries worldwide</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <p class="sec-eye">London</p>
+            <h2 class="sec-title serif">London Offices</h2>
+          </div>
+          <div class="offices-grid" id="london-offices"></div>
+          <div class="sec-head reveal" style="margin-top: 64px">
+            <p class="sec-eye">Country</p>
+            <h2 class="sec-title serif">Country Offices</h2>
+          </div>
+          <div class="offices-grid" id="country-offices"></div>
+        </div>
+      </section>
+      <div class="map-section">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.0!2d-0.1561!3d51.5172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccde6e8a8b%3A0x5c20b5e3e4c3f4d!2sBaker%20St%2C%20London!5e0!3m2!1sen!2suk!4v1690000000000"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <div class="map-overlay">
+          <h3 class="serif">Head Office</h3>
+          <p>55 Baker Street<br />London W1U 8AN<br />United Kingdom</p>
+          <p style="margin-top: 10px; font-size: 13px; color: var(--gray-dark)">
+            +44 (0)20 7629 8171
+          </p>
+          <a
+            href="#"
+            onclick="
+              nav('contact');
+              return false;
+            "
+            >Get directions →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CONTACT PAGE ==================== -->
+    <div id="page-contact" class="page">
+      <div class="page-hero">
+        <div class="page-hero-inner">
+          <p class="sec-eye">Get in touch</p>
+          <h1 class="serif">Contact Us</h1>
+          <p>Our team of experts is ready to assist you</p>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="contact-grid">
+            <div class="reveal-l">
+              <h2
+                class="serif"
+                style="font-size: 30px; font-weight: 300; margin-bottom: 30px"
+              >
+                Send us a message
+              </h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First name</label
+                  ><input type="text" id="cf-fn" placeholder="James" />
+                </div>
+                <div class="form-group">
+                  <label>Last name</label
+                  ><input type="text" id="cf-ln" placeholder="Whitfield" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email address</label
+                ><input
+                  type="email"
+                  id="cf-email"
+                  placeholder="james@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label>Phone number</label
+                ><input type="tel" id="cf-ph" placeholder="+44 20 7000 0000" />
+              </div>
+              <div class="form-group">
+                <label>Enquiry type</label>
+                <select id="cf-type">
+                  <option>General enquiry</option>
+                  <option>Buying</option>
+                  <option>Selling</option>
+                  <option>Renting</option>
+                  <option>Valuation request</option>
+                  <option>Commercial</option>
+                  <option>Press enquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Message</label
+                ><textarea
+                  id="cf-msg"
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+              <div
+                class="form-group"
+                style="display: flex; align-items: center; gap: 10px"
+              >
+                <input type="checkbox" id="cf-consent" style="width: auto" />
+                <label
+                  for="cf-consent"
+                  style="
+                    text-transform: none;
+                    font-size: 12px;
+                    letter-spacing: 0;
+                    cursor: pointer;
+                  "
+                  >I agree to be contacted in accordance with the
+                  <a href="#" style="color: var(--gold)"
+                    >Privacy Policy</a
+                  ></label
+                >
+              </div>
+              <button
+                class="btn-dark"
+                onclick="submitForm()"
+                style="margin-top: 8px; padding: 14px 36px"
+              >
+                Send enquiry
+              </button>
+            </div>
+            <div class="reveal-r">
+              <h2
+                class="serif"
+                style="font-size: 30px; font-weight: 300; margin-bottom: 30px"
+              >
+                Get in touch
+              </h2>
+              <div class="contact-detail">
+                <h5>Head Office</h5>
+                <p>55 Baker Street<br />London W1U 8AN<br />United Kingdom</p>
+              </div>
+              <div class="contact-detail">
+                <h5>Telephone</h5>
+                <p>+44 (0)20 7629 8171</p>
+              </div>
+              <div class="contact-detail">
+                <h5>Email</h5>
+                <p>enquiries@nobleestates.co.uk</p>
+              </div>
+              <div class="contact-detail">
+                <h5>Opening Hours</h5>
+                <p>
+                  Monday – Friday: 9:00am – 6:00pm<br />Saturday: 10:00am –
+                  4:00pm<br />Sunday: By appointment only
+                </p>
+              </div>
+              <div class="contact-info-box">
+                <p class="sec-eye" style="margin-bottom: 8px">Free valuation</p>
+                <p
+                  style="
+                    font-size: 13.5px;
+                    color: var(--gray-dark);
+                    margin-bottom: 16px;
+                    line-height: 1.7;
+                  "
+                >
+                  Find out what your property is worth with a free,
+                  no-obligation valuation from one of our local experts.
+                </p>
+                <button
+                  class="btn-dark"
+                  style="padding: 11px 24px; font-size: 11px"
+                >
+                  Book a valuation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <div class="footer-brand">Aaron <span>Holmes</span></div>
+            <p class="footer-desc">
+              One of the world's leading independent real estate consultancies,
+              with a network of over 600 offices across 52 countries. Trusted by
+              buyers, sellers and investors since 1896.
+            </p>
+            <div class="footer-socials">
+              <div class="soc" title="X / Twitter">𝕏</div>
+              <div class="soc" title="Facebook">f</div>
+              <div class="soc" title="LinkedIn">in</div>
+              <div class="soc" title="Instagram">◻</div>
+              <div class="soc" title="YouTube">▷</div>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Residential</h5>
+            <a onclick="nav('properties')">Properties for sale</a>
+            <a onclick="nav('properties')">Properties to rent</a>
+            <a onclick="nav('properties')">New build homes</a>
+            <a onclick="nav('properties')">Country homes</a>
+            <a>International</a>
+            <a>Commercial</a>
+          </div>
+          <div class="footer-col">
+            <h5>Services</h5>
+            <a>Buying</a>
+            <a>Selling</a>
+            <a>Lettings</a>
+            <a onclick="nav('contact')">Valuations</a>
+            <a>Interior design</a>
+            <a>Finance</a>
+            <a>Rural consultancy</a>
+          </div>
+          <div class="footer-col">
+            <h5>Research</h5>
+            <a onclick="nav('insights')">Market insights</a>
+            <a onclick="nav('insights')">The Wealth Report</a>
+            <a onclick="nav('insights')">The View</a>
+            <a onclick="nav('insights')">Perspectives</a>
+            <a onclick="nav('insights')">All reports</a>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <a onclick="nav('about')">About us</a>
+            <a onclick="nav('offices')">Our offices</a>
+            <a>Careers</a>
+            <a onclick="nav('contact')">Contact us</a>
+            <a>Press</a>
+            <a>Sustainability</a>
+            <a>Global website</a>
+          </div>
+        </div>
+        <div class="footer-bot">
+          <span>© 2025 Noble Estates LLP. All rights reserved.</span>
+          <div>
+            <a>Privacy policy</a>
+            <a>Cookie policy</a>
+            <a>Terms of use</a>
+            <a>Accessibility</a>
+            <a>Modern slavery statement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
