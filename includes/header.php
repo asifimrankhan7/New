@@ -17,6 +17,7 @@
     window.PROPERTIES = <?= json_encode($PROPERTIES) ?>;
     window.GALLERY_IMGS = <?= json_encode($GALLERY_IMGS) ?>;
   </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="script.js" defer></script>
 </head>
 
@@ -45,9 +46,7 @@
 
   <!-- BACK TO TOP -->
   <div id="btt" title="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M18 15l-6-6-6 6" />
-    </svg>
+    <i data-lucide="chevron-up"></i>
   </div>
 
   <!-- TOAST -->
@@ -77,11 +76,7 @@
     <div class="topbar">
       <div class="wrap">
         <div class="topbar-left">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="10" />
-            <path
-              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" />
-          </svg>
+          <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
           <span>United Kingdom</span>
         </div>
         <div class="topbar-right">

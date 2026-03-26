@@ -30,11 +30,7 @@
         </div>
         <div class="search-bar-kf">
           <div class="search-input-kf">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+            <i data-lucide="map-pin" style="color: #666; width: 18px; height: 18px;"></i>
             <input type="text" id="search-loc" placeholder="Search by county, town or city" />
           </div>
           <button class="btn-kf" onclick="nav('properties')">Buy</button>
@@ -43,10 +39,7 @@
       </div>
     </div>
     <div class="scroll-hint">
-      <svg width="18" height="24" viewBox="0 0 18 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <rect x="1" y="1" width="16" height="22" rx="8" />
-        <line x1="9" y1="6" x2="9" y2="10" />
-      </svg>
+      <i data-lucide="mouse" style="width: 18px; height: 24px;"></i>
       <span>Scroll</span>
     </div>
   </div>
@@ -89,36 +82,17 @@
               <img src="<?= $p['img'] ?>" alt="<?= $p['name'] ?>" loading="lazy" />
               <span class="prop-badge"><?= $p['status'] ?></span>
               <div class="prop-fav" onclick="toggleFav(event,this)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                </svg>
+                <i data-lucide="heart"></i>
               </div>
             </div>
             <div class="prop-body">
               <div class="prop-price serif"><?= $p['price'] ?></div>
               <div class="prop-name"><?= $p['name'] ?></div>
-              <div class="prop-loc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg><?= $p['loc'] ?></div>
+              <div class="prop-loc"><i data-lucide="map-pin" style="width: 11px; height: 11px; margin-right: 4px;"></i><?= $p['loc'] ?></div>
               <div class="prop-meta">
-                <span class="prop-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.8">
-                    <path d="M3 22V12a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v10" />
-                    <path d="M2 22h20" />
-                    <rect x="9" y="11" width="6" height="11" />
-                  </svg><?= $p['beds'] ?> beds</span>
-                <span class="prop-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.8">
-                    <path d="M4 12h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6zM4 12V5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7" />
-                  </svg><?= $p['baths'] ?> baths</span>
-                <span class="prop-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.8">
-                    <rect x="3" y="3" width="18" height="18" rx="1" />
-                    <path d="M3 9h18M9 21V9" />
-                  </svg><?= $p['sqft'] ?> sq ft</span>
+                <span class="prop-meta-item"><i data-lucide="bed" style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['beds'] ?> beds</span>
+                <span class="prop-meta-item"><i data-lucide="bath" style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['baths'] ?> baths</span>
+                <span class="prop-meta-item"><i data-lucide="maximize-2" style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['sqft'] ?> sq ft</span>
               </div>
             </div>
           </div>
@@ -167,9 +141,7 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal">
-          <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.2">
-            <path d="M24 4L4 20v24h14V30h12v14h14V20z" />
-          </svg>
+          <i data-lucide="home" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Buying</h3>
           <p class="svc-text">
             Expert guidance from search to completion. We help you find the
@@ -178,12 +150,7 @@
           <span class="svc-link">Buying services →</span>
         </div>
         <div class="svc-card reveal">
-          <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.2">
-            <rect x="8" y="16" width="32" height="26" rx="1" />
-            <path d="M16 16V12a8 8 0 0 1 16 0v4" />
-            <line x1="24" y1="25" x2="24" y2="33" />
-            <line x1="20" y1="29" x2="28" y2="29" />
-          </svg>
+          <i data-lucide="shopping-bag" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Selling</h3>
           <p class="svc-text">
             From valuation to handover of keys, our award-winning sales team
@@ -192,10 +159,7 @@
           <span class="svc-link">Selling services →</span>
         </div>
         <div class="svc-card reveal">
-          <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.2">
-            <circle cx="24" cy="18" r="9" />
-            <path d="M8 44c0-8.837 7.163-16 16-16s16 7.163 16 16" />
-          </svg>
+          <i data-lucide="users" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Landlord services</h3>
           <p class="svc-text">
             Comprehensive property management, tenant finding and rent
@@ -204,10 +168,7 @@
           <span class="svc-link">Landlord services →</span>
         </div>
         <div class="svc-card reveal">
-          <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.2">
-            <rect x="8" y="8" width="32" height="32" rx="2" />
-            <path d="M16 24l6 6 10-12" />
-          </svg>
+          <i data-lucide="check-square" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Tenant services</h3>
           <p class="svc-text">
             We work to understand exactly what you're looking for, matching
@@ -216,10 +177,7 @@
           <span class="svc-link">Tenant services →</span>
         </div>
         <div class="svc-card reveal">
-          <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.2">
-            <circle cx="24" cy="24" r="16" />
-            <path d="M24 14v10l7 4" />
-          </svg>
+          <i data-lucide="clock" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Valuations</h3>
           <p class="svc-text">
             Accurate, independent valuations for all purposes — residential,
@@ -228,10 +186,7 @@
           <span class="svc-link">Valuation services →</span>
         </div>
         <div class="svc-card reveal">
-          <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.2">
-            <path d="M10 38l10-10 8 8 14-18" />
-            <circle cx="24" cy="12" r="5" />
-          </svg>
+          <i data-lucide="trending-up" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Research & insights</h3>
           <p class="svc-text">
             Market-leading research and analysis to help you make informed

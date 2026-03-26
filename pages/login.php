@@ -2,9 +2,7 @@
   <div class="login-classic-wrap">
     <!-- Back Button -->
     <div class="login-back" onclick="nav('home')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M19 12H5M12 19l-7-7 7-7" />
-      </svg>
+      <i data-lucide="arrow-left" style="width: 24px; height: 24px;"></i>
       <span>Back to Home</span>
     </div>
 

@@ -7,17 +7,17 @@
       <img src="${p.img}" alt="${p.name}" loading="lazy"/>
       <span class="prop-badge">${p.status}</span>
       <div class="prop-fav" onclick="toggleFav(event,this)">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <i data-lucide="heart"></i>
       </div>
     </div>
     <div class="prop-body">
       <div class="prop-price serif">${p.price}</div>
       <div class="prop-name">${p.name}</div>
-      <div class="prop-loc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${p.loc}</div>
+      <div class="prop-loc"><i data-lucide="map-pin" style="width: 11px; height: 11px; margin-right: 4px;"></i>${p.loc}</div>
       <div class="prop-meta">
-        <span class="prop-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 22V12a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v10"/><path d="M2 22h20"/><rect x="9" y="11" width="6" height="11"/></svg>${p.beds} beds</span>
-        <span class="prop-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6zM4 12V5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7"/></svg>${p.baths} baths</span>
-        <span class="prop-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>${p.sqft} sq ft</span>
+        <span class="prop-meta-item"><i data-lucide="bed" style="width: 13px; height: 13px; margin-right: 4px;"></i>${p.beds} beds</span>
+        <span class="prop-meta-item"><i data-lucide="bath" style="width: 13px; height: 13px; margin-right: 4px;"></i>${p.baths} baths</span>
+        <span class="prop-meta-item"><i data-lucide="maximize-2" style="width: 13px; height: 13px; margin-right: 4px;"></i>${p.sqft} sq ft</span>
       </div>
     </div>
   </div>`;
@@ -64,6 +64,7 @@
         document.getElementById("f-count").textContent =
           `Showing ${Math.min(propsShown, filteredProps.length)} of ${filteredProps.length} properties`;
         initReveal();
+        if (window.lucide) lucide.createIcons();
       }
       function loadMore() {
         propsShown = Math.min(propsShown + 3, PROPERTIES.length);
@@ -308,6 +309,7 @@
           countUp();
           initReveal();
           initCookie();
+          if (window.lucide) lucide.createIcons();
           setTimeout(() => document.getElementById("loader").remove(), 700);
         }, 1800);
       });
