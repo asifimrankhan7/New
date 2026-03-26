@@ -7,5 +7,9 @@
 <?php include 'pages/insights.php'; ?>
 <?php include 'pages/offices.php'; ?>
 <?php include 'pages/contact.php'; ?>
+<?php include 'pages/login.php'; ?>
 
-<?php include 'includes/footer.php'; ?>
+<!-- Footer removed by user -->
+  <script src="script.js"></script>
+</body>
+</html>

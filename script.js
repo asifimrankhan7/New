@@ -48,9 +48,21 @@
       function renderAllProps() {
         const el = document.getElementById("all-props");
         if (!el) return;
-        el.innerHTML = PROPERTIES.slice(0, propsShown).map(propCard).join("");
+
+        const fStatus = document.getElementById("f-status")?.value || "";
+        const fType = document.getElementById("f-type")?.value || "";
+        
+        let filteredProps = PROPERTIES;
+        if (fStatus) {
+            filteredProps = filteredProps.filter(p => p.status === fStatus);
+        }
+        if (fType) {
+            filteredProps = filteredProps.filter(p => p.type === fType);
+        }
+
+        el.innerHTML = filteredProps.slice(0, propsShown).map(propCard).join("");
         document.getElementById("f-count").textContent =
-          `Showing ${Math.min(propsShown, PROPERTIES.length)} of ${PROPERTIES.length} properties`;
+          `Showing ${Math.min(propsShown, filteredProps.length)} of ${filteredProps.length} properties`;
         initReveal();
       }
       function loadMore() {
@@ -153,6 +165,11 @@
       }
       function closeMob() {
         document.getElementById("mobile-menu").classList.remove("on");
+        document.body.style.overflow = ""; 
+      }
+      function openMob() {
+        document.getElementById("mobile-menu").classList.add("on");
+        document.body.style.overflow = "hidden";
       }
 
       /* ===== FAVOURITES ===== */
@@ -253,14 +270,18 @@
         });
       }
 
-      /* ===== NAVBAR SCROLL ===== */
+      /* ===== NAVBAR SCROLL & CLICK ===== */
+      const navUnit = document.getElementById("main-nav-unit");
       window.addEventListener("scroll", () => {
-        const nav = document.getElementById("nav");
-        nav.classList.toggle("scrolled", window.scrollY > 40);
-        document
-          .getElementById("btt")
-          .classList.toggle("show", window.scrollY > 400);
+        if (navUnit) navUnit.classList.toggle("scrolled", window.scrollY > 40);
+        const btt = document.getElementById("btt");
+        if (btt) btt.classList.toggle("show", window.scrollY > 400);
       });
+      if (navUnit) {
+        navUnit.addEventListener("click", function () {
+          this.classList.toggle("visible");
+        });
+      }
 
       /* ===== COOKIE ===== */
       function initCookie() {
