@@ -66,7 +66,6 @@
       <a href="#" onclick="nav('offices'); closeMob();">Consultant & Mentorship</a>
       <a href="#" onclick="nav('insights'); closeMob();">Testimonial</a>
       <a href="#" onclick="nav('contact'); closeMob();">Contact Us</a>
-      <a href="#" onclick="nav('login'); closeMob();">Sign In</a>
     </nav>
   </div>
 
@@ -83,7 +82,6 @@
           <a href="#" onclick="nav('about'); return false;">About us</a>
           <a href="#" onclick="nav('contact'); return false;">Contact us</a>
           <a href="#" onclick="nav('about'); return false;">Careers</a>
-          <a href="#" onclick="nav('login'); return false;">Sign in</a>
         </div>
       </div>
     </div>
