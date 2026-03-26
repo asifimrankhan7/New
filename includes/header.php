@@ -34,14 +34,18 @@
 
   <!-- COOKIE BANNER -->
   <div id="cookie">
-    <p>
-      We use cookies to improve your experience and analyse site usage. By
-      continuing, you accept our <a href="#">Cookie Policy</a> and
-      <a href="#">Privacy Policy</a>.
-    </p>
-    <div style="display: flex; flex-shrink: 0">
-      <button id="cookie-decline">Decline</button>
-      <button id="cookie-accept">Accept all</button>
+    <div class="cookie-card">
+      <div class="cookie-copy">
+        <p class="cookie-title">Cookie Preferences</p>
+        <p>
+          We use cookies to improve performance, personalize content, and analyze traffic.
+          Review our <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-decline" type="button">Decline</button>
+        <button id="cookie-accept" type="button">Accept all</button>
+      </div>
     </div>
   </div>
 

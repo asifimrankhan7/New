@@ -17,6 +17,7 @@ if (!array_key_exists($currentPage, $allowedPages)) {
 <?php include 'includes/header.php'; ?>
 
 <?php include $allowedPages[$currentPage]; ?>
+<?php include 'includes/footer.php'; ?>
 </body>
 
 </html>
