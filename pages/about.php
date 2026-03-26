@@ -6,6 +6,7 @@
         'eye' => 'Our story',
         'title' => 'About Noble Estates',
         'subtitle' => 'Serving discerning clients across the UK and globe for over a century',
+        'bg_image' => 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=70',
       ];
       include 'includes/components/hero.php';
       ?>

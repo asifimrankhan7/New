@@ -6,6 +6,7 @@
         'eye' => 'Get in touch',
         'title' => 'Contact Us',
         'subtitle' => 'Our team of experts is ready to assist you',
+        'bg_image' => 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1800&q=70',
       ];
       include 'includes/components/hero.php';
       ?>

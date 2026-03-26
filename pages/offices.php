@@ -6,6 +6,7 @@
         'eye' => 'Find us',
         'title' => 'Our Offices',
         'subtitle' => 'Over 600 offices across 52 countries worldwide',
+        'bg_image' => 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=70',
       ];
       include 'includes/components/hero.php';
       ?>

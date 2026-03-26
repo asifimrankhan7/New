@@ -6,6 +6,7 @@
     'eye' => 'Intelligence',
     'title' => 'Research & Insights',
     'subtitle' => 'Award-winning market analysis and property intelligence',
+    'bg_image' => 'https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=1800&q=70',
   ];
   include 'includes/components/hero.php';
   ?>
