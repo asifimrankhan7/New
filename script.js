@@ -270,21 +270,25 @@
       }
 
       /* ===== COOKIE ===== */
+      function setCookieModalVisible(visible) {
+        const cookieEl = document.getElementById("cookie");
+        if (!cookieEl) return;
+        cookieEl.classList.toggle("show", visible);
+        document.body.classList.toggle("cookie-lock", visible);
+      }
       function initCookie() {
         if (!localStorage.getItem("ne-cookie")) {
-          setTimeout(
-            () => document.getElementById("cookie").classList.add("show"),
-            2500,
-          );
+          setTimeout(() => setCookieModalVisible(true), 900);
         }
       }
       document.getElementById("cookie-accept").onclick = () => {
         localStorage.setItem("ne-cookie", "accepted");
-        document.getElementById("cookie").classList.remove("show");
+        setCookieModalVisible(false);
         toast("Cookie preferences saved");
       };
       document.getElementById("cookie-decline").onclick = () => {
-        document.getElementById("cookie").classList.remove("show");
+        localStorage.setItem("ne-cookie", "declined");
+        setCookieModalVisible(false);
       };
 
       /* ===== LOADER ===== */

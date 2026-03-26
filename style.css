@@ -1905,9 +1905,7 @@ footer {
   }
 
   #cookie {
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    padding: 14px;
   }
   .cookie-card {
     flex-direction: column;
@@ -2093,20 +2091,20 @@ footer {
 /* ===================== COOKIE BANNER ===================== */
 #cookie {
   position: fixed;
-  left: 24px;
-  right: 24px;
-  bottom: 20px;
+  inset: 0;
   z-index: 9000;
-  display: block;
-  transform: translateY(120%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(9, 8, 7, 0.62);
+  pointer-events: none;
   opacity: 0;
-  transition:
-    transform 0.4s var(--ease),
-    opacity 0.4s var(--ease);
+  transition: opacity 0.3s var(--ease);
 }
 #cookie.show {
-  transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 .cookie-card {
   background: #14120f;
@@ -2114,6 +2112,7 @@ footer {
   border: 1px solid #322a20;
   border-left: 3px solid var(--gold);
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.34);
+  width: min(760px, 100%);
   padding: 18px 18px 18px 16px;
   display: flex;
   align-items: flex-end;
@@ -2177,6 +2176,9 @@ footer {
 #cookie-decline:hover {
   border-color: var(--gold);
   color: var(--white);
+}
+body.cookie-lock {
+  overflow: hidden;
 }
 
 /* ===================== BACK TO TOP ===================== */
