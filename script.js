@@ -200,39 +200,18 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===== COOKIE DIALOG ===== */
   function initCookie() {
     const dialog = document.getElementById("cookie-dialog");
-    if (!dialog || localStorage.getItem("ah-cookies-v1")) return;
+    if (!dialog) return;
 
     // Show dialog after a short delay
-    setTimeout(() => dialog.classList.add("show"), 1000);
+    setTimeout(() => dialog.classList.add("show"), 1200);
 
-    const savePrefs = (prefs) => {
-      localStorage.setItem("ah-cookies-v1", JSON.stringify(prefs));
+    const close = (msg) => {
       dialog.classList.remove("show");
-      window.toast(prefs.analytics && prefs.marketing ? "All cookies accepted" : "Preferences saved");
+      if (msg) window.toast(msg);
     };
 
-    // Quick Actions
-    document.getElementById("cookie-accept")?.addEventListener("click", () => {
-      savePrefs({ essential: true, analytics: true, marketing: true });
-    });
-
-    document.getElementById("cookie-decline")?.addEventListener("click", () => {
-      savePrefs({ essential: true, analytics: false, marketing: false });
-    });
-
-    // Manage Settings
-    document.getElementById("cookie-manage")?.addEventListener("click", () => {
-      dialog.classList.add("is-managing");
-    });
-
-    // Save Detailed Preferences
-    document.getElementById("cookie-save")?.addEventListener("click", () => {
-      savePrefs({
-        essential: true,
-        analytics: document.getElementById("cookie-analytics")?.checked,
-        marketing: document.getElementById("cookie-marketing")?.checked
-      });
-    });
+    document.getElementById("cookie-accept")?.addEventListener("click", () => close("Cookies accepted"));
+    document.getElementById("cookie-decline")?.addEventListener("click", () => close("Cookies declined"));
   }
 
   /* ===== LIGHTBOX HTML ===== */
