@@ -342,7 +342,7 @@
   </section>
 
   <!-- NEWSLETTER -->
-  <section class="sec-dark" style="padding-top: 0; border-top: 1px solid #1e1e1e">
+  <section class="sec-dark" style="border-top: 1px solid #1e1e1e">
     <div class="wrap">
       <div class="newsletter-wrap reveal">
         <p class="sec-eye" style="color: var(--gold)">Stay informed</p>
