@@ -90,3 +90,25 @@
         </div>
     </div>
 </footer>
+
+<!-- BACK TO TOP -->
+<div id="btt" title="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+  <i data-lucide="chevron-up"></i>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- COOKIE DIALOG -->
+<div id="cookie-dialog" class="cookie-dialog">
+  <div class="cookie-content">
+    <div class="cookie-header">
+      <h3 class="serif">Cookie Policy</h3>
+      <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+    </div>
+    <div class="cookie-footer">
+      <button id="cookie-decline" type="button" class="btn-outline">Reject</button>
+      <button id="cookie-accept" type="button" class="btn-dark">Accept</button>
+    </div>
+  </div>
+</div>
