@@ -2389,15 +2389,7 @@ section {
 .cookie-footer {
   display: flex;
   gap: 12px;
-}
-
-.cookie-footer button {
-  flex: 1;
-  padding: 12px 0;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 600;
+  justify-content: flex-end;
 }
 
 /* ===================== BACK TO TOP ===================== */
