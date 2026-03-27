@@ -198,59 +198,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ===== COOKIE DIALOG ===== */
-  function setCookieVisible(visible) {
-    const el = document.getElementById("cookie-dialog");
-    if (el) el.classList.toggle("show", visible);
-  }
-
   function initCookie() {
-    if (!localStorage.getItem("ne-cookies-v2")) {
-      setTimeout(() => setCookieVisible(true), 600);
-    }
+    const dialog = document.getElementById("cookie-dialog");
+    if (!dialog || localStorage.getItem("ah-cookies-v1")) return;
 
-    const manageBtn    = document.getElementById("cookie-manage");
-    const settingsPanel = document.getElementById("cookie-settings");
-    const acceptBtn    = document.getElementById("cookie-accept");
-    const declineBtn   = document.getElementById("cookie-decline");
-    const saveBtn      = document.getElementById("cookie-save");
+    // Show dialog after a short delay
+    setTimeout(() => dialog.classList.add("show"), 1000);
 
-    if (manageBtn && settingsPanel) {
-      manageBtn.onclick = () => {
-        settingsPanel.classList.add("visible");
-        manageBtn.style.display = "none";
-        if (acceptBtn)  acceptBtn.style.display  = "none";
-        if (declineBtn) declineBtn.style.display  = "none";
-        if (saveBtn)    saveBtn.style.display     = "inline-block";
-      };
-    }
+    const savePrefs = (prefs) => {
+      localStorage.setItem("ah-cookies-v1", JSON.stringify(prefs));
+      dialog.classList.remove("show");
+      window.toast(prefs.analytics && prefs.marketing ? "All cookies accepted" : "Preferences saved");
+    };
 
-    if (acceptBtn) {
-      acceptBtn.onclick = () => {
-        localStorage.setItem("ne-cookies-v2", JSON.stringify({ essential: true, analytics: true, marketing: true }));
-        setCookieVisible(false);
-        toast("All cookies accepted");
-      };
-    }
+    // Quick Actions
+    document.getElementById("cookie-accept")?.addEventListener("click", () => {
+      savePrefs({ essential: true, analytics: true, marketing: true });
+    });
 
-    if (declineBtn) {
-      declineBtn.onclick = () => {
-        localStorage.setItem("ne-cookies-v2", JSON.stringify({ essential: true, analytics: false, marketing: false }));
-        setCookieVisible(false);
-        toast("Only essential cookies accepted");
-      };
-    }
+    document.getElementById("cookie-decline")?.addEventListener("click", () => {
+      savePrefs({ essential: true, analytics: false, marketing: false });
+    });
 
-    if (saveBtn) {
-      saveBtn.onclick = () => {
-        localStorage.setItem("ne-cookies-v2", JSON.stringify({
-          essential: true,
-          analytics: document.getElementById("cookie-analytics")?.checked,
-          marketing: document.getElementById("cookie-marketing")?.checked,
-        }));
-        setCookieVisible(false);
-        toast("Preferences saved");
-      };
-    }
+    // Manage Settings
+    document.getElementById("cookie-manage")?.addEventListener("click", () => {
+      dialog.classList.add("is-managing");
+    });
+
+    // Save Detailed Preferences
+    document.getElementById("cookie-save")?.addEventListener("click", () => {
+      savePrefs({
+        essential: true,
+        analytics: document.getElementById("cookie-analytics")?.checked,
+        marketing: document.getElementById("cookie-marketing")?.checked
+      });
+    });
   }
 
   /* ===== LIGHTBOX HTML ===== */

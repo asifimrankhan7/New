@@ -2383,9 +2383,20 @@ section {
   padding-top: 20px;
 }
 
-.cookie-settings.visible {
+.cookie-settings.visible,
+.cookie-dialog.is-managing .cookie-settings {
   display: block;
   animation: fadeIn 0.3s var(--ease);
+}
+
+.cookie-dialog.is-managing #cookie-manage,
+.cookie-dialog.is-managing #cookie-decline,
+.cookie-dialog.is-managing #cookie-accept {
+  display: none !important;
+}
+
+.cookie-dialog.is-managing #cookie-save {
+  display: inline-block !important;
 }
 
 .setting-item {
