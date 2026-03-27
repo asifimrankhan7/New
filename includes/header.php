@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Noble Estates | London & UK Luxury Property Experts</title>
+  <title>Aaron Holmes Residential | London & UK Property Experts</title>
   <meta name="description"
-    content="Noble Estates — London's premier luxury estate agency. Find exclusive properties for sale and rent across the UK and worldwide." />
+    content="Aaron Holmes Residential — award-winning estate agency based in Ilford. Residential sales, lettings, mortgages and conveyancing across East London and Essex." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script>
-    // Inject PHP data as global JS variables for dynamic logic in script.js
-    window.PROPERTIES = <?= json_encode($PROPERTIES) ?>;
+    // Gallery data needed by the lightbox in script.js
     window.GALLERY_IMGS = <?= json_encode($GALLERY_IMGS) ?>;
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -26,10 +25,10 @@
   <!-- PAGE LOADER -->
   <div id="loader">
     <div class="loader-logo">
-      <img src="images/logo.webp" alt="Noble Estates" />
+      <img src="images/logo.webp" alt="Aaron Holmes Residential" />
     </div>
     <div class="loader-bar"></div>
-    <div class="loader-text">Curating your experience</div>
+    <div class="loader-text">Loading your experience</div>
   </div>
 
   <!-- COOKIE DIALOG -->
