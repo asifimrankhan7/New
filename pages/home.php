@@ -18,12 +18,6 @@
         Residential sales, lettings & mortgages across Ilford, Barking, Gants Hill and beyond
       </p>
       <div class="hero-search">
-        <!-- TABS -->
-        <div class="hsearch-tabs">
-          <button class="hsearch-tab on" onclick="hTab(this,'buy')" type="button">Buy</button>
-          <button class="hsearch-tab" onclick="hTab(this,'rent')" type="button">Rent</button>
-          <button class="hsearch-tab" onclick="hTab(this,'new')" type="button">New Homes</button>
-        </div>
         <!-- SEARCH CARD -->
         <div class="hsearch-card">
           <div class="hsearch-field hsearch-field--location">
