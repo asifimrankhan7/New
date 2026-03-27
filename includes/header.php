@@ -94,7 +94,7 @@
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
     <div class="mob-head">
-      <span class="mob-logo"><img src="images/logo.webp" alt="Noble Estates" /></span>
+      <span class="mob-logo"><img src="images/logo.webp" alt="Aaron Holmes Residential" /></span>
       <span class="mob-close" onclick="closeMob()">✕</span>
     </div>
     <nav class="mob-nav">
@@ -137,64 +137,26 @@
             <a class="nav-link" href="<?= $routeBase ?>home">Home</a>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="<?= $routeBase ?>properties">For Sale <span class="arr">▾</span></a>
-            <div class="mega">
-              <div class="mega-col">
-                <h4>Properties</h4>
-                <a href="<?= $routeBase ?>properties">All properties</a>
-                <a href="<?= $routeBase ?>properties">New build homes</a>
-                <a href="<?= $routeBase ?>properties">Country houses</a>
-                <a href="<?= $routeBase ?>properties">Penthouses</a>
-                <a href="<?= $routeBase ?>properties">Cottages</a>
-              </div>
+            <a class="nav-link" href="<?= $routeBase ?>properties">Properties</a>
+          </div>
+          <div class="nav-item has-dropdown">
+            <a class="nav-link" href="<?= $routeBase ?>contact">Services <span class="arr">▾</span></a>
+            <div class="nav-dropdown">
+              <a href="<?= $routeBase ?>properties">Residential Sales</a>
+              <a href="<?= $routeBase ?>contact">Lettings</a>
+              <a href="<?= $routeBase ?>contact">Mortgages</a>
+              <a href="<?= $routeBase ?>contact">Conveyancing</a>
+              <a href="<?= $routeBase ?>contact">Mentorship</a>
             </div>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="<?= $routeBase ?>contact">Lettings <span class="arr">▾</span></a>
-            <div class="mega">
-              <div class="mega-col">
-                <h4>Let</h4>
-                <a href="<?= $routeBase ?>contact">Long lets</a>
-                <a href="<?= $routeBase ?>contact">Short lets</a>
-                <a href="<?= $routeBase ?>contact">Corporate lets</a>
-              </div>
-            </div>
+            <a class="nav-link" href="<?= $routeBase ?>insights">Insights</a>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="<?= $routeBase ?>about">About Us <span class="arr">▾</span></a>
-            <div class="mega">
-              <div class="mega-col">
-                <h4>Discover</h4>
-                <a href="<?= $routeBase ?>about">Our History</a>
-                <a href="<?= $routeBase ?>about">Our Team</a>
-                <a href="<?= $routeBase ?>about">Sustainability</a>
-              </div>
-            </div>
+            <a class="nav-link" href="<?= $routeBase ?>about">About Us</a>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="<?= $routeBase ?>offices">Consultant & Mentorship <span class="arr">▾</span></a>
-            <div class="mega">
-              <div class="mega-col">
-                <h4>Programs</h4>
-                <a href="<?= $routeBase ?>offices">Real Estate Mentorship</a>
-                <a href="<?= $routeBase ?>offices">Investment Consulting</a>
-                <a href="<?= $routeBase ?>offices">Career Guidance</a>
-              </div>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link" href="<?= $routeBase ?>insights">Testimonial <span class="arr">▾</span></a>
-            <div class="mega">
-              <div class="mega-col">
-                <h4>Client Stories</h4>
-                <a href="<?= $routeBase ?>insights">Buyer Reviews</a>
-                <a href="<?= $routeBase ?>insights">Seller Experiences</a>
-                <a href="<?= $routeBase ?>insights">Landlord Feedback</a>
-              </div>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link" href="<?= $routeBase ?>contact">Contact Us</a>
+            <a class="nav-link" href="<?= $routeBase ?>contact">Contact</a>
           </div>
         </nav>
 

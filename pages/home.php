@@ -10,12 +10,12 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Luxury property specialists since 1896</p>
+      <p class="hero-eyebrow">East London & Essex property specialists</p>
       <h1 class="hero-title serif">
-        Discover Your<br /><em>Dream Home</em>
+        Find Your<br /><em>Perfect Home</em>
       </h1>
       <p class="hero-sub">
-        From elegant London apartments to grand country estates
+        Residential sales, lettings & mortgages across Ilford, Barking, Gants Hill and beyond
       </p>
       <div class="hero-search-kf">
         <div class="scope-toggles">
@@ -48,16 +48,16 @@
   <div class="stats-band">
     <div class="stats-inner">
       <div class="stat-cell">
-        <span class="stat-num serif" data-count="600">0</span><span class="stat-lbl">Global Offices</span>
+        <span class="stat-num serif" data-count="500">0</span><span class="stat-lbl">Properties Sold</span>
       </div>
       <div class="stat-cell">
-        <span class="stat-num serif" data-count="52">0</span><span class="stat-lbl">Countries</span>
+        <span class="stat-num serif" data-count="10">0</span><span class="stat-lbl">Years in Business</span>
       </div>
       <div class="stat-cell">
-        <span class="stat-num serif" data-count="20000">0</span><span class="stat-lbl">Professionals</span>
+        <span class="stat-num serif" data-count="98">0</span><span class="stat-lbl">% Client Satisfaction</span>
       </div>
       <div class="stat-cell">
-        <span class="stat-num serif" data-count="127">0</span><span class="stat-lbl">Years of Excellence</span>
+        <span class="stat-num serif" data-count="8">0</span><span class="stat-lbl">Areas Covered</span>
       </div>
     </div>
   </div>
@@ -113,21 +113,20 @@
   <!-- SPLIT: SELL WITH US -->
   <div class="split reveal-l">
     <div class="split-media">
-      <img src="https://images.unsplash.com/photo-1560184897-502a475f7a0d?w=900&q=80" alt="Luxury interior"
-        loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1560184897-502a475f7a0d?w=900&q=80" alt="Estate agent meeting" loading="lazy" />
     </div>
     <div class="split-content">
       <p class="split-eye">Sell or let with us</p>
-      <h2 class="split-title serif">Local experts.<br />Global reach.</h2>
+      <h2 class="split-title serif">Local knowledge.<br />Outstanding results.</h2>
       <p class="split-body">
-        Our network of more than 600 offices worldwide means your property
-        receives unparalleled exposure. From discreet private sales to
-        flagship marketing campaigns, we tailor every instruction to achieve
-        the best possible result for you.
+        With over a decade of experience serving Ilford, Gants Hill, Barking
+        and surrounding areas, Aaron Holmes Residential delivers exceptional
+        results for every client. Our personal approach means your property
+        gets the attention it deserves.
       </p>
       <div class="btn-row">
         <a class="btn-dark" href="index.php?page=contact">
-          Arrange a valuation
+          Free valuation
         </a>
         <a class="btn-outline" href="index.php?page=contact">
           Sell with us
@@ -145,64 +144,61 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal">
-          <i data-lucide="home" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
-          <h3 class="svc-title serif">Buying</h3>
+          <i data-lucide="home" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <h3 class="svc-title serif">Residential Sales</h3>
           <p class="svc-text">
-            Expert guidance from search to completion. We help you find the
-            right home at the right price in the right location.
+            From valuation to completion, our experienced sales team maximises
+            your sale price with precise local market knowledge across East
+            London and Essex.
           </p>
-          <span class="svc-link">Buying services →</span>
+          <span class="svc-link">Sales services &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="shopping-bag" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
-          <h3 class="svc-title serif">Selling</h3>
+          <i data-lucide="key" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <h3 class="svc-title serif">Lettings</h3>
           <p class="svc-text">
-            From valuation to handover of keys, our award-winning sales team
-            delivers outstanding results for every instruction.
+            Full property management, tenant finding and rent collection for
+            landlords across Ilford, Gants Hill, Barking and Barkingside.
           </p>
-          <span class="svc-link">Selling services →</span>
+          <span class="svc-link">Lettings services &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="users" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
-          <h3 class="svc-title serif">Landlord services</h3>
+          <i data-lucide="calculator" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <h3 class="svc-title serif">Mortgages</h3>
           <p class="svc-text">
-            Comprehensive property management, tenant finding and rent
-            collection services for landlords across the UK.
+            Whole-of-market mortgage advice tailored to your situation. Whether
+            you are a first-time buyer or remortgaging an investment portfolio,
+            we find the right deal for you.
           </p>
-          <span class="svc-link">Landlord services →</span>
+          <span class="svc-link">Mortgage advice &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="check-square" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
-          <h3 class="svc-title serif">Tenant services</h3>
+          <i data-lucide="file-text" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <h3 class="svc-title serif">Conveyancing</h3>
           <p class="svc-text">
-            We work to understand exactly what you're looking for, matching
-            you to properties that truly meet your needs.
+            Fast, reliable conveyancing through our trusted panel of solicitors.
+            We keep your transaction on track at every stage of the legal process.
           </p>
-          <span class="svc-link">Tenant services →</span>
+          <span class="svc-link">Conveyancing &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="clock" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="clock" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Valuations</h3>
           <p class="svc-text">
-            Accurate, independent valuations for all purposes — residential,
-            commercial, rural and specialist properties.
+            Free, no-obligation market appraisals from local specialists.
+            Accurate pricing is the foundation of a successful sale or let.
           </p>
-          <span class="svc-link">Valuation services →</span>
+          <span class="svc-link">Book a valuation &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="trending-up" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
-          <h3 class="svc-title serif">Research & insights</h3>
+          <i data-lucide="trending-up" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <h3 class="svc-title serif">Mentorship</h3>
           <p class="svc-text">
-            Market-leading research and analysis to help you make informed
-            property decisions, backed by decades of data.
+            Aspiring estate agents can join the Aaron Holmes mentorship programme
+            &mdash; learn the industry from the inside with hands-on guidance
+            from our experienced team.
           </p>
-          <a class="svc-link" href="index.php?page=insights">View insights →</a>
+          <a class="svc-link" href="index.php?page=contact">Enquire now &rarr;</a>
         </div>
       </div>
     </div>
@@ -211,18 +207,18 @@
   <!-- SPLIT: COUNTRY DARK -->
   <div class="split">
     <div class="split-content sec-dark reveal-l">
-      <p class="split-eye">Rural & country</p>
+      <p class="split-eye">New homes & developments</p>
       <h2 class="split-title serif" style="color: var(--white)">
-        Country Houses,<br />Farms & Estates
+        New Build Homes<br />in East London
       </h2>
       <p class="split-body" style="color: rgba(255, 255, 255, 0.5)">
-        Our dedicated rural team has unrivalled expertise in the buying and
-        selling of country properties. From Cotswold manors to Scottish
-        estates, we know every corner of the British countryside.
+        As a trusted partner to local developers, we market and sell brand-new
+        homes across Barking Riverside, Barkingside, and Redbridge — with
+        Help to Buy and shared ownership options available.
       </p>
       <div>
         <a class="btn-outline light" href="index.php?page=properties">
-          Explore country homes
+          View new homes
         </a>
       </div>
     </div>
@@ -299,37 +295,35 @@
         <div class="tes-track" id="tes-track">
           <div class="tes-slide">
             <p class="tes-quote">
-              "Noble Estates found us our dream home in the Cotswolds within
-              three weeks. Their attention to detail and understanding of
-              exactly what we needed was extraordinary."
+              "Aaron Holmes sold our family home in Gants Hill within two weeks,
+              achieving above the asking price. Their knowledge of the local
+              market is second to none."
             </p>
-            <p class="tes-author">
-              — Charles & Arabella Windsor, Gloucestershire
-            </p>
+            <p class="tes-author">— Mr & Mrs Patel, Gants Hill IG2</p>
           </div>
           <div class="tes-slide">
             <p class="tes-quote">
-              "From valuation to completion, the team handled everything
-              with the utmost professionalism. We achieved a price beyond
-              our expectations."
+              "As a first-time buyer I was anxious, but the team guided me
+              through every step. They were always available and made the
+              whole process stress-free."
             </p>
-            <p class="tes-author">— James Harrington, Chelsea London</p>
+            <p class="tes-author">— James O., Ilford IG1</p>
           </div>
           <div class="tes-slide">
             <p class="tes-quote">
-              "Their international network is genuinely impressive. They
-              connected us with a buyer from Singapore who paid asking price
-              in under a fortnight."
+              "Aaron has managed my Barking rental portfolio for years.
+              Reliable, professional, and genuinely invested in getting the
+              best for both landlords and tenants."
             </p>
-            <p class="tes-author">— Victoria St. Claire, Belgravia</p>
+            <p class="tes-author">— Landlord client, Barking IG11</p>
           </div>
           <div class="tes-slide">
             <p class="tes-quote">
-              "The lettings team has managed our London portfolio for six
-              years. Meticulous, responsive and always putting our interests
-              first."
+              "We relocated from overseas and Aaron Holmes made finding our
+              new home in Barkingside completely seamless. Outstanding service
+              from start to finish."
             </p>
-            <p class="tes-author">— David & Clare Pemberton, Kensington</p>
+            <p class="tes-author">— The Okonkwo Family, Barkingside IG6</p>
           </div>
         </div>
         <div class="tes-dots" id="tes-dots"></div>
@@ -347,11 +341,11 @@
       <div class="newsletter-wrap reveal">
         <p class="sec-eye" style="color: var(--gold)">Stay informed</p>
         <h2 class="sec-title serif" style="color: var(--white)">
-          Property & Market Updates
+          East London Property Updates
         </h2>
         <p class="sec-sub" style="color: rgba(255, 255, 255, 0.45)">
-          Receive curated insights, new listings and market commentary
-          direct to your inbox
+          Receive new listings, local market reports and property tips
+          direct to your inbox — no spam, just genuine insight
         </p>
         <div class="newsletter-form">
           <input type="email" id="nl-email" placeholder="Your email address" />

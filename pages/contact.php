@@ -2,10 +2,10 @@
     <div id="page-contact" class="page">
       <?php
       $hero = [
-        'variant' => 'page',
-        'eye' => 'Get in touch',
-        'title' => 'Contact Us',
-        'subtitle' => 'Our team of experts is ready to assist you',
+        'variant'  => 'page',
+        'eye'      => 'Get in touch',
+        'title'    => 'Contact Us',
+        'subtitle' => 'Our friendly team is ready to help with sales, lettings, valuations and mortgages',
         'bg_image' => 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1800&q=70',
       ];
       include 'includes/components/hero.php';
@@ -48,10 +48,11 @@
                   <option>General enquiry</option>
                   <option>Buying</option>
                   <option>Selling</option>
-                  <option>Renting</option>
+                  <option>Renting / Lettings</option>
                   <option>Valuation request</option>
-                  <option>Commercial</option>
-                  <option>Press enquiry</option>
+                  <option>Mortgage advice</option>
+                  <option>Conveyancing</option>
+                  <option>Landlord services</option>
                 </select>
               </div>
               <div class="form-group">
@@ -95,21 +96,21 @@
                 Get in touch
               </h2>
               <div class="contact-detail">
-                <h5>Head Office</h5>
-                <p>55 Baker Street<br />London W1U 8AN<br />United Kingdom</p>
+                <h5>Office Address</h5>
+                <p>36 Parham Drive<br />Gants Hill, Ilford<br />IG2 6NA</p>
               </div>
               <div class="contact-detail">
                 <h5>Telephone</h5>
-                <p>+44 (0)20 7629 8171</p>
+                <p>0208 252 0115</p>
               </div>
               <div class="contact-detail">
                 <h5>Email</h5>
-                <p>enquiries@nobleestates.co.uk</p>
+                <p>info@aaron-holmes.co.uk<br />sales@aaron-holmes.co.uk<br />lettings@aaron-holmes.co.uk</p>
               </div>
               <div class="contact-detail">
                 <h5>Opening Hours</h5>
                 <p>
-                  Monday – Friday: 9:00am – 6:00pm<br />Saturday: 10:00am – 4:00pm<br />Sunday: By appointment only
+                  Monday – Friday: 9:00am – 6:00pm<br />Saturday: 10:00am – 4:00pm<br />Sunday: By appointment
                 </p>
               </div>
               <div class="contact-info-box">
