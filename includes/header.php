@@ -32,19 +32,54 @@
     <div class="loader-text">Curating your experience</div>
   </div>
 
-  <!-- COOKIE BANNER -->
-  <div id="cookie">
-    <div class="cookie-card">
-      <div class="cookie-copy">
-        <p class="cookie-title">Cookie Preferences</p>
-        <p>
-          We use cookies to improve performance, personalize content, and analyze traffic.
-          Review our <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.
-        </p>
+  <!-- COOKIE DIALOG -->
+  <div id="cookie-dialog" class="cookie-dialog">
+    <div class="cookie-content">
+      <div class="cookie-header">
+        <h3 class="serif">Cookie Preferences</h3>
+        <p>We use cookies to ensure you get the best experience on our website. By continuing to browse, we'll assume you're happy with our use of cookies.</p>
       </div>
-      <div class="cookie-actions">
-        <button id="cookie-decline" type="button">Decline</button>
-        <button id="cookie-accept" type="button">Accept all</button>
+      
+      <div id="cookie-settings" class="cookie-settings">
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-name">Essential</span>
+            <span class="setting-desc">Necessary for the website to function properly.</span>
+          </div>
+          <div class="setting-toggle">
+            <input type="checkbox" checked disabled>
+            <span class="toggle-slider"></span>
+          </div>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-name">Analytics</span>
+            <span class="setting-desc">Help us understand how visitors interact with the site.</span>
+          </div>
+          <div class="setting-toggle">
+            <input type="checkbox" id="cookie-analytics" checked>
+            <span class="toggle-slider"></span>
+          </div>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-name">Marketing</span>
+            <span class="setting-desc">Used to deliver relevant advertisements to you.</span>
+          </div>
+          <div class="setting-toggle">
+            <input type="checkbox" id="cookie-marketing">
+            <span class="toggle-slider"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cookie-footer">
+        <button id="cookie-manage" type="button" class="btn-outline">Manage Settings</button>
+        <div class="cookie-main-actions">
+          <button id="cookie-decline" type="button" class="btn-outline">Decline All</button>
+          <button id="cookie-accept" type="button" class="btn-dark">Accept All</button>
+          <button id="cookie-save" type="button" class="btn-dark" style="display: none;">Save Preferences</button>
+        </div>
       </div>
     </div>
   </div>

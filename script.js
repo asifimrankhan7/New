@@ -192,19 +192,19 @@
 
       /* ===== SUBSCRIBE ===== */
       function subscribe() {
-        const e = document.getElementById("nl-email");
-        if (!e.value || !e.value.includes("@")) {
+        const e = document.getElementById("footer-nl-email") || document.getElementById("nl-email");
+        if (!e || !e.value || !e.value.includes("@")) {
           toast("Please enter a valid email address");
           return;
         }
-        toast("Subscribed! Welcome to Noble Estates insights.");
+        toast("Subscribed! Welcome to Noble Estates luxury insights.");
         e.value = "";
       }
 
       /* ===== TOAST ===== */
       function toast(msg, duration = 3000) {
         const t = document.getElementById("toast");
-        t.textContent = msg;
+        t.innerText = msg;
         t.classList.add("show");
         setTimeout(() => t.classList.remove("show"), duration);
       }
@@ -269,27 +269,66 @@
         });
       }
 
-      /* ===== COOKIE ===== */
+      /* ===== COOKIE DIALOG LOGIC ===== */
       function setCookieModalVisible(visible) {
-        const cookieEl = document.getElementById("cookie");
+        const cookieEl = document.getElementById("cookie-dialog");
         if (!cookieEl) return;
         cookieEl.classList.toggle("show", visible);
-        document.body.classList.toggle("cookie-lock", visible);
       }
+
       function initCookie() {
-        if (!localStorage.getItem("ne-cookie")) {
-          setTimeout(() => setCookieModalVisible(true), 900);
+        const saved = localStorage.getItem("ne-cookies-v2");
+        if (!saved) {
+          setTimeout(() => setCookieModalVisible(true), 2000);
+        }
+
+        const manageBtn = document.getElementById("cookie-manage");
+        const settingsPanel = document.getElementById("cookie-settings");
+        const acceptBtn = document.getElementById("cookie-accept");
+        const declineBtn = document.getElementById("cookie-decline");
+        const saveBtn = document.getElementById("cookie-save");
+
+        if (manageBtn) {
+          manageBtn.onclick = () => {
+            settingsPanel.classList.toggle("visible");
+            manageBtn.style.display = "none";
+            acceptBtn.style.display = "none";
+            declineBtn.style.display = "none";
+            saveBtn.style.display = "inline-block";
+          };
+        }
+
+        if (acceptBtn) {
+          acceptBtn.onclick = () => {
+            const prefs = { essential: true, analytics: true, marketing: true };
+            localStorage.setItem("ne-cookies-v2", JSON.stringify(prefs));
+            setCookieModalVisible(false);
+            toast("All cookies accepted");
+          };
+        }
+
+        if (declineBtn) {
+          declineBtn.onclick = () => {
+            const prefs = { essential: true, analytics: false, marketing: false };
+            localStorage.setItem("ne-cookies-v2", JSON.stringify(prefs));
+            setCookieModalVisible(false);
+            toast("Only essential cookies accepted");
+          };
+        }
+
+        if (saveBtn) {
+          saveBtn.onclick = () => {
+            const prefs = {
+              essential: true,
+              analytics: document.getElementById("cookie-analytics").checked,
+              marketing: document.getElementById("cookie-marketing").checked
+            };
+            localStorage.setItem("ne-cookies-v2", JSON.stringify(prefs));
+            setCookieModalVisible(false);
+            toast("Preferences saved");
+          };
         }
       }
-      document.getElementById("cookie-accept").onclick = () => {
-        localStorage.setItem("ne-cookie", "accepted");
-        setCookieModalVisible(false);
-        toast("Cookie preferences saved");
-      };
-      document.getElementById("cookie-decline").onclick = () => {
-        localStorage.setItem("ne-cookie", "declined");
-        setCookieModalVisible(false);
-      };
 
       /* ===== LOADER ===== */
       window.addEventListener("load", () => {
@@ -299,7 +338,10 @@
           initReveal();
           initCookie();
           if (window.lucide) lucide.createIcons();
-          setTimeout(() => document.getElementById("loader").remove(), 700);
+          setTimeout(() => {
+            const l = document.getElementById("loader");
+            if (l) l.remove();
+          }, 700);
         }, 1800);
       });
 

@@ -88,11 +88,15 @@
             <div class="prop-body">
               <div class="prop-price serif"><?= $p['price'] ?></div>
               <div class="prop-name"><?= $p['name'] ?></div>
-              <div class="prop-loc"><i data-lucide="map-pin" style="width: 11px; height: 11px; margin-right: 4px;"></i><?= $p['loc'] ?></div>
+              <div class="prop-loc"><i data-lucide="map-pin"
+                  style="width: 11px; height: 11px; margin-right: 4px;"></i><?= $p['loc'] ?></div>
               <div class="prop-meta">
-                <span class="prop-meta-item"><i data-lucide="bed" style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['beds'] ?> beds</span>
-                <span class="prop-meta-item"><i data-lucide="bath" style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['baths'] ?> baths</span>
-                <span class="prop-meta-item"><i data-lucide="maximize-2" style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['sqft'] ?> sq ft</span>
+                <span class="prop-meta-item"><i data-lucide="bed"
+                    style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['beds'] ?> beds</span>
+                <span class="prop-meta-item"><i data-lucide="bath"
+                    style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['baths'] ?> baths</span>
+                <span class="prop-meta-item"><i data-lucide="maximize-2"
+                    style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['sqft'] ?> sq ft</span>
               </div>
             </div>
           </div>
@@ -141,7 +145,8 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal">
-          <i data-lucide="home" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="home" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Buying</h3>
           <p class="svc-text">
             Expert guidance from search to completion. We help you find the
@@ -150,7 +155,8 @@
           <span class="svc-link">Buying services →</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="shopping-bag" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="shopping-bag" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Selling</h3>
           <p class="svc-text">
             From valuation to handover of keys, our award-winning sales team
@@ -159,7 +165,8 @@
           <span class="svc-link">Selling services →</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="users" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="users" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Landlord services</h3>
           <p class="svc-text">
             Comprehensive property management, tenant finding and rent
@@ -168,7 +175,8 @@
           <span class="svc-link">Landlord services →</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="check-square" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="check-square" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Tenant services</h3>
           <p class="svc-text">
             We work to understand exactly what you're looking for, matching
@@ -177,7 +185,8 @@
           <span class="svc-link">Tenant services →</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="clock" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="clock" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Valuations</h3>
           <p class="svc-text">
             Accurate, independent valuations for all purposes — residential,
@@ -186,7 +195,8 @@
           <span class="svc-link">Valuation services →</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="trending-up" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="trending-up" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Research & insights</h3>
           <p class="svc-text">
             Market-leading research and analysis to help you make informed
@@ -210,9 +220,11 @@
         selling of country properties. From Cotswold manors to Scottish
         estates, we know every corner of the British countryside.
       </p>
-      <a class="btn-outline light" href="index.php?page=properties">
-        Explore country homes
-      </a>
+      <div>
+        <a class="btn-outline light" href="index.php?page=properties">
+          Explore country homes
+        </a>
+      </div>
     </div>
     <div class="split-media reveal-r">
       <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Country estate"
