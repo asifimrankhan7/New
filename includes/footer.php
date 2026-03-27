@@ -12,7 +12,7 @@
                 <p>Stay informed. Subscribe to our luxury market insights and local listings.</p>
                 <div class="newsletter-form">
                     <input type="email" id="footer-nl-email" placeholder="E-mail Address" aria-label="Email address for newsletter">
-                    <button type="button" onclick="subscribe()" class="nl-btn">Subscribe Now</button>
+                    <button type="button" onclick="subscribe()">Subscribe Now</button>
                 </div>
             </div>
         </div>

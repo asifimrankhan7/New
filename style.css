@@ -1501,46 +1501,6 @@ section {
   line-height: 1.6;
 }
 
-.newsletter-form {
-  display: flex;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 8px;
-  transition: border-color 0.3s;
-}
-
-.newsletter-form:focus-within {
-  border-color: var(--gold);
-}
-
-.newsletter-form input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  color: var(--white);
-  font-size: 14px;
-  outline: none;
-  padding: 8px 0;
-}
-
-.newsletter-form input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.nl-btn {
-  background: transparent;
-  color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0 10px;
-  transition: transform 0.3s;
-}
-
-.nl-btn:hover {
-  transform: translateX(4px);
-}
-
 .footer-divider {
   border: none;
   height: 1px;

@@ -273,13 +273,21 @@
       function setCookieModalVisible(visible) {
         const cookieEl = document.getElementById("cookie-dialog");
         if (!cookieEl) return;
-        cookieEl.classList.toggle("show", visible);
+        if (visible) {
+          cookieEl.classList.add("show");
+        } else {
+          cookieEl.classList.remove("show");
+        }
       }
 
       function initCookie() {
+        // Clear legacy key to avoid conflicts
+        localStorage.removeItem("ne-cookie");
+        
         const saved = localStorage.getItem("ne-cookies-v2");
         if (!saved) {
-          setTimeout(() => setCookieModalVisible(true), 2000);
+          // Show with minimal delay after page is interactive
+          setTimeout(() => setCookieModalVisible(true), 600);
         }
 
         const manageBtn = document.getElementById("cookie-manage");
@@ -288,13 +296,13 @@
         const declineBtn = document.getElementById("cookie-decline");
         const saveBtn = document.getElementById("cookie-save");
 
-        if (manageBtn) {
+        if (manageBtn && settingsPanel) {
           manageBtn.onclick = () => {
-            settingsPanel.classList.toggle("visible");
+            settingsPanel.classList.add("visible");
             manageBtn.style.display = "none";
-            acceptBtn.style.display = "none";
-            declineBtn.style.display = "none";
-            saveBtn.style.display = "inline-block";
+            if (acceptBtn) acceptBtn.style.display = "none";
+            if (declineBtn) declineBtn.style.display = "none";
+            if (saveBtn) saveBtn.style.display = "inline-block";
           };
         }
 
@@ -333,13 +341,13 @@
       /* ===== LOADER ===== */
       window.addEventListener("load", () => {
         setTimeout(() => {
-          document.getElementById("loader").classList.add("hide");
+          const l = document.getElementById("loader");
+          if (l) l.classList.add("hide");
           countUp();
           initReveal();
           initCookie();
           if (window.lucide) lucide.createIcons();
           setTimeout(() => {
-            const l = document.getElementById("loader");
             if (l) l.remove();
           }, 700);
         }, 1800);
