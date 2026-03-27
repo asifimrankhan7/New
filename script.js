@@ -272,21 +272,11 @@
       /* ===== COOKIE DIALOG LOGIC ===== */
       function setCookieModalVisible(visible) {
         const cookieEl = document.getElementById("cookie-dialog");
-        if (!cookieEl) return;
-        if (visible) {
-          cookieEl.classList.add("show");
-        } else {
-          cookieEl.classList.remove("show");
-        }
+        if (cookieEl) cookieEl.classList.toggle("show", visible);
       }
 
       function initCookie() {
-        // Clear legacy key to avoid conflicts
-        localStorage.removeItem("ne-cookie");
-        
-        const saved = localStorage.getItem("ne-cookies-v2");
-        if (!saved) {
-          // Show with minimal delay after page is interactive
+        if (!localStorage.getItem("ne-cookies-v2")) {
           setTimeout(() => setCookieModalVisible(true), 600);
         }
 
