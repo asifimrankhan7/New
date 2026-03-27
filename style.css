@@ -659,6 +659,8 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;  /* strictly left-align children */
+  text-align: left;         /* override parent text-align: center */
   min-width: 0;
   flex: 1;
 }
