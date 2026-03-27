@@ -233,7 +233,11 @@ document.addEventListener("DOMContentLoaded", () => {
       countUp();
       initReveal();
       initCookie();
-      if (window.lucide) lucide.createIcons();
+      if (window.lucide) lucide.createIcons({
+          attrs: {
+    'stroke-width': 1.5 // default is 2
+  }
+      });
       setTimeout(() => { if (l) l.remove(); }, 700);
     }, 1800);
   });
