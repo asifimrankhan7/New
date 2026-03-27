@@ -97,6 +97,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ===== HERO SEARCH TABS ===== */
+  window.hTab = function (btn, mode) {
+    document.querySelectorAll(".hsearch-tab").forEach(t => t.classList.remove("on"));
+    btn.classList.add("on");
+    // Update search link placeholder based on mode
+    const input = document.getElementById("search-loc");
+    if (input) {
+      input.placeholder = mode === "rent"
+        ? "Area, postcode or address…"
+        : mode === "new"
+          ? "Town, city or postcode…"
+          : "Area, postcode or address…";
+    }
+  };
+
   /* ===== SEARCH / NAV ACTIONS ===== */
   window.doSearch = function () {
     const loc = document.getElementById("search-loc")?.value;

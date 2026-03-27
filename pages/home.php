@@ -17,24 +17,70 @@
       <p class="hero-sub">
         Residential sales, lettings & mortgages across Ilford, Barking, Gants Hill and beyond
       </p>
-      <div class="hero-search-kf">
-        <div class="scope-toggles">
-          <label class="scope-radio">
-            <input type="radio" name="scope" value="uk" checked>
-            <span class="sr-circle"></span> UK
-          </label>
-          <label class="scope-radio">
-            <input type="radio" name="scope" value="worldwide">
-            <span class="sr-circle"></span> Worldwide
-          </label>
+      <div class="hero-search">
+        <!-- TABS -->
+        <div class="hsearch-tabs">
+          <button class="hsearch-tab on" onclick="hTab(this,'buy')" type="button">Buy</button>
+          <button class="hsearch-tab" onclick="hTab(this,'rent')" type="button">Rent</button>
+          <button class="hsearch-tab" onclick="hTab(this,'new')" type="button">New Homes</button>
         </div>
-        <div class="search-bar-kf">
-          <div class="search-input-kf">
-            <i data-lucide="map-pin" style="color: #666; width: 18px; height: 18px;"></i>
-            <input type="text" id="search-loc" placeholder="Search by county, town or city" />
+        <!-- SEARCH CARD -->
+        <div class="hsearch-card">
+          <div class="hsearch-field hsearch-field--location">
+            <i data-lucide="map-pin" class="hsearch-icon"></i>
+            <div class="hsearch-field-inner">
+              <span class="hsearch-field-label">Location</span>
+              <input id="search-loc" type="text" class="hsearch-input" placeholder="Area, town or postcode…" />
+            </div>
           </div>
-          <a class="btn-kf" href="index.php?page=properties">Buy</a>
-          <a class="btn-kf" href="index.php?page=properties">Rent</a>
+          <div class="hsearch-divider"></div>
+          <div class="hsearch-field">
+            <i data-lucide="bed" class="hsearch-icon"></i>
+            <div class="hsearch-field-inner">
+              <span class="hsearch-field-label">Bedrooms</span>
+              <select class="hsearch-select">
+                <option value="">Any</option>
+                <option>1+</option>
+                <option>2+</option>
+                <option>3+</option>
+                <option>4+</option>
+                <option>5+</option>
+              </select>
+            </div>
+          </div>
+          <div class="hsearch-divider"></div>
+          <div class="hsearch-field">
+            <i data-lucide="home" class="hsearch-icon"></i>
+            <div class="hsearch-field-inner">
+              <span class="hsearch-field-label">Type</span>
+              <select class="hsearch-select">
+                <option value="">Any type</option>
+                <option>Apartment</option>
+                <option>House</option>
+                <option>Penthouse</option>
+                <option>New build</option>
+              </select>
+            </div>
+          </div>
+          <div class="hsearch-divider"></div>
+          <div class="hsearch-field">
+            <i data-lucide="pound-sterling" class="hsearch-icon"></i>
+            <div class="hsearch-field-inner">
+              <span class="hsearch-field-label">Price</span>
+              <select class="hsearch-select">
+                <option value="">Any price</option>
+                <option>Up to £300k</option>
+                <option>Up to £500k</option>
+                <option>Up to £750k</option>
+                <option>Up to £1m</option>
+                <option>£1m+</option>
+              </select>
+            </div>
+          </div>
+          <a class="hsearch-btn" href="index.php?page=properties">
+            <i data-lucide="search" style="width:17px;height:17px;"></i>
+            <span>Search</span>
+          </a>
         </div>
       </div>
     </div>
