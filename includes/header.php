@@ -24,11 +24,18 @@
   <?php $routeBase = 'index.php?page='; ?>
   <!-- PAGE LOADER -->
   <div id="loader">
-    <div class="loader-logo">
-      <img src="images/logo.webp" alt="Aaron Holmes Residential" />
+    <div class="loader-left">
+      <div class="loader-eyebrow">Est. 2014 &nbsp;&mdash;&nbsp; Gants Hill, London</div>
+      <div class="loader-brand serif">Aaron Holmes<br/><em>Residential</em></div>
+      <div class="loader-service">Residential Sales &bull; Lettings &bull; Mortgages</div>
+      <div class="loader-progress">
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        <span class="loader-pct" id="loader-pct">0%</span>
+      </div>
     </div>
-    <div class="loader-bar"></div>
-    <div class="loader-text">Loading your experience</div>
+    <div class="loader-right">
+      <div class="loader-right-line"></div>
+    </div>
   </div>
 
   <!-- COOKIE DIALOG -->

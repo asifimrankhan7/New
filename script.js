@@ -6,6 +6,22 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* ===== LOADER PERCENTAGE COUNTER ===== */
+  (function animatePct() {
+    const el = document.getElementById("loader-pct");
+    if (!el) return;
+    const duration = 1700; // match CSS animation duration
+    const start    = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      // ease-in-out curve matching the CSS cubic-bezier
+      const eased = p < 0.5 ? 2 * p * p : -1 + (4 - 2 * p) * p;
+      el.textContent = Math.round(eased * 100) + "%";
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+
   /* ===== LIGHTBOX ===== */
   let lbIdx = 0;
 
