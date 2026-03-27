@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="hsearch-divider"></div>
-          <div class="hsearch-field">
+          <div class="hsearch-field hsearch-field--beds">
             <i data-lucide="bed" class="hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Bedrooms</span>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="hsearch-divider"></div>
-          <div class="hsearch-field">
+          <div class="hsearch-field hsearch-field--type">
             <i data-lucide="home" class="hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Type</span>
@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="hsearch-divider"></div>
-          <div class="hsearch-field">
+          <div class="hsearch-field hsearch-field--price">
             <i data-lucide="pound-sterling" class="hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Price</span>
