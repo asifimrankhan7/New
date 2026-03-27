@@ -153,7 +153,8 @@
   <!-- SPLIT: SELL WITH US -->
   <div class="split reveal-l">
     <div class="split-media">
-      <img src="https://images.unsplash.com/photo-1560184897-502a475f7a0d?w=900&q=80" alt="Estate agent meeting" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1560184897-502a475f7a0d?w=900&q=80" alt="Estate agent meeting"
+        loading="lazy" />
     </div>
     <div class="split-content">
       <p class="split-eye">Sell or let with us</p>
@@ -184,7 +185,8 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal">
-          <i data-lucide="home" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="home" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Residential Sales</h3>
           <p class="svc-text">
             From valuation to completion, our experienced sales team maximises
@@ -194,7 +196,8 @@
           <span class="svc-link">Sales services &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="key" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="key" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Lettings</h3>
           <p class="svc-text">
             Full property management, tenant finding and rent collection for
@@ -203,7 +206,8 @@
           <span class="svc-link">Lettings services &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="calculator" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="calculator" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Mortgages</h3>
           <p class="svc-text">
             Whole-of-market mortgage advice tailored to your situation. Whether
@@ -213,7 +217,8 @@
           <span class="svc-link">Mortgage advice &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="file-text" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="file-text" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Conveyancing</h3>
           <p class="svc-text">
             Fast, reliable conveyancing through our trusted panel of solicitors.
@@ -222,7 +227,8 @@
           <span class="svc-link">Conveyancing &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="clock" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="clock" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Valuations</h3>
           <p class="svc-text">
             Free, no-obligation market appraisals from local specialists.
@@ -231,7 +237,8 @@
           <span class="svc-link">Book a valuation &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="trending-up" class="svc-icon" style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i data-lucide="trending-up" class="svc-icon"
+            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
           <h3 class="svc-title serif">Mentorship</h3>
           <p class="svc-text">
             Aspiring estate agents can join the Aaron Holmes mentorship programme
@@ -370,26 +377,6 @@
         <div class="tes-arrows">
           <div class="tes-arrow" onclick="tesPrev()">‹</div>
           <div class="tes-arrow" onclick="tesNext()">›</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="sec-dark" style="border-top: 1px solid #1e1e1e">
-    <div class="wrap">
-      <div class="newsletter-wrap reveal">
-        <p class="sec-eye" style="color: var(--gold)">Stay informed</p>
-        <h2 class="sec-title serif" style="color: var(--white)">
-          East London Property Updates
-        </h2>
-        <p class="sec-sub" style="color: rgba(255, 255, 255, 0.45)">
-          Receive new listings, local market reports and property tips
-          direct to your inbox — no spam, just genuine insight
-        </p>
-        <div class="newsletter-form">
-          <input type="email" id="nl-email" placeholder="Your email address" />
-          <button onclick="subscribe()">Subscribe</button>
         </div>
       </div>
     </div>

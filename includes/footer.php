@@ -103,6 +103,7 @@
 <div id="cookie-dialog" class="cookie-dialog">
   <div class="cookie-content">
     <div class="cookie-header">
+      <i data-lucide="cookie" class="cookie-icon"></i>
       <h3 class="serif">Cookie Policy</h3>
       <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
     </div>
