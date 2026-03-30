@@ -21,7 +21,7 @@
         <!-- SEARCH CARD -->
         <div class="hsearch-card">
           <div class="hsearch-field hsearch-field--location">
-            <i data-lucide="map-pin" class="hsearch-icon"></i>
+            <i class="ph-light ph-map-pin hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Location</span>
               <input id="search-loc" type="text" class="hsearch-input" placeholder="Area, town or postcode…" />
@@ -29,7 +29,7 @@
           </div>
           <div class="hsearch-divider"></div>
           <div class="hsearch-field hsearch-field--beds">
-            <i data-lucide="bed" class="hsearch-icon"></i>
+            <i class="ph-light ph-bed hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Bedrooms</span>
               <select class="hsearch-select">
@@ -44,7 +44,7 @@
           </div>
           <div class="hsearch-divider"></div>
           <div class="hsearch-field hsearch-field--type">
-            <i data-lucide="home" class="hsearch-icon"></i>
+            <i class="ph-light ph-house hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Type</span>
               <select class="hsearch-select">
@@ -58,7 +58,7 @@
           </div>
           <div class="hsearch-divider"></div>
           <div class="hsearch-field hsearch-field--price">
-            <i data-lucide="pound-sterling" class="hsearch-icon"></i>
+            <i class="ph-light ph-currency-gbp hsearch-icon"></i>
             <div class="hsearch-field-inner">
               <span class="hsearch-field-label">Price</span>
               <select class="hsearch-select">
@@ -72,14 +72,14 @@
             </div>
           </div>
           <a class="hsearch-btn" href="index.php?page=properties">
-            <i data-lucide="search" style="width:17px;height:17px;"></i>
+            <i class="ph-light ph-magnifying-glass" style="font-size: 18px;"></i>
             <span>Search</span>
           </a>
         </div>
       </div>
     </div>
     <div class="scroll-hint">
-      <i data-lucide="mouse" style="width: 18px; height: 24px;"></i>
+      <i class="ph-light ph-mouse" style="font-size: 24px;"></i>
       <span>Scroll</span>
     </div>
   </div>
@@ -123,20 +123,20 @@
               <span class="prop-badge"><?= $p['status'] ?></span>
             </a>
             <div class="prop-fav" onclick="toggleFav(event,this)">
-              <i data-lucide="heart"></i>
+              <i class="ph-light ph-heart"></i>
             </div>
             <div class="prop-body">
               <div class="prop-price serif"><?= $p['price'] ?></div>
               <div class="prop-name"><?= $p['name'] ?></div>
-              <div class="prop-loc"><i data-lucide="map-pin"
-                  style="width: 11px; height: 11px; margin-right: 4px;"></i><?= $p['loc'] ?></div>
+              <div class="prop-loc"><i class="ph-light ph-map-pin"
+                  style="font-size: 14px; margin-right: 4px;"></i><?= $p['loc'] ?></div>
               <div class="prop-meta">
-                <span class="prop-meta-item"><i data-lucide="bed"
-                    style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['beds'] ?> beds</span>
-                <span class="prop-meta-item"><i data-lucide="bath"
-                    style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['baths'] ?> baths</span>
-                <span class="prop-meta-item"><i data-lucide="maximize-2"
-                    style="width: 13px; height: 13px; margin-right: 4px;"></i><?= $p['sqft'] ?> sq ft</span>
+                <span class="prop-meta-item"><i class="ph-light ph-bed"
+                    style="font-size: 16px; margin-right: 4px;"></i><?= $p['beds'] ?> beds</span>
+                <span class="prop-meta-item"><i class="ph-light ph-bathtub"
+                    style="font-size: 16px; margin-right: 4px;"></i><?= $p['baths'] ?> baths</span>
+                <span class="prop-meta-item"><i class="ph-light ph-corners-out"
+                    style="font-size: 16px; margin-right: 4px;"></i><?= $p['sqft'] ?> sq ft</span>
               </div>
             </div>
           </div>
@@ -185,8 +185,8 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal">
-          <i data-lucide="home" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i class="ph-light ph-house svc-icon"
+            style="color: var(--gold); font-size: 32px; margin-bottom: 20px; display: block;"></i>
           <h3 class="svc-title serif">Residential Sales</h3>
           <p class="svc-text">
             From valuation to completion, our experienced sales team maximises
@@ -196,8 +196,8 @@
           <span class="svc-link">Sales services &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="key" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i class="ph-light ph-key svc-icon"
+            style="color: var(--gold); font-size: 32px; margin-bottom: 20px; display: block;"></i>
           <h3 class="svc-title serif">Lettings</h3>
           <p class="svc-text">
             Full property management, tenant finding and rent collection for
@@ -206,8 +206,8 @@
           <span class="svc-link">Lettings services &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="calculator" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i class="ph-light ph-calculator svc-icon"
+            style="color: var(--gold); font-size: 32px; margin-bottom: 20px; display: block;"></i>
           <h3 class="svc-title serif">Mortgages</h3>
           <p class="svc-text">
             Whole-of-market mortgage advice tailored to your situation. Whether
@@ -217,8 +217,8 @@
           <span class="svc-link">Mortgage advice &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="file-text" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i class="ph-light ph-file-text svc-icon"
+            style="color: var(--gold); font-size: 32px; margin-bottom: 20px; display: block;"></i>
           <h3 class="svc-title serif">Conveyancing</h3>
           <p class="svc-text">
             Fast, reliable conveyancing through our trusted panel of solicitors.
@@ -227,8 +227,8 @@
           <span class="svc-link">Conveyancing &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="clock" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i class="ph-light ph-clock svc-icon"
+            style="color: var(--gold); font-size: 32px; margin-bottom: 20px; display: block;"></i>
           <h3 class="svc-title serif">Valuations</h3>
           <p class="svc-text">
             Free, no-obligation market appraisals from local specialists.
@@ -237,8 +237,8 @@
           <span class="svc-link">Book a valuation &rarr;</span>
         </div>
         <div class="svc-card reveal">
-          <i data-lucide="trending-up" class="svc-icon"
-            style="color: var(--gold); width: 32px; height: 32px; margin-bottom: 20px;"></i>
+          <i class="ph-light ph-trend-up svc-icon"
+            style="color: var(--gold); font-size: 32px; margin-bottom: 20px; display: block;"></i>
           <h3 class="svc-title serif">Mentorship</h3>
           <p class="svc-text">
             Aspiring estate agents can join the Aaron Holmes mentorship programme
@@ -374,8 +374,8 @@
       </div>
       <div class="tes-controls">
         <div class="tes-arrows" id="tes-arrows">
-          <div class="tes-arrow prev"><i data-lucide="chevron-left"></i></div>
-          <div class="tes-arrow next"><i data-lucide="chevron-right"></i></div>
+          <div class="tes-arrow prev"><i class="ph-light ph-caret-left"></i></div>
+          <div class="tes-arrow next"><i class="ph-light ph-caret-right"></i></div>
         </div>
         <div class="tes-dots" id="tes-dots">
           <button aria-label="Slide 1"></button>

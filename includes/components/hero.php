@@ -80,7 +80,7 @@ $imageAlt = $hero['image_alt'] ?? 'Hero image';
 
   <?php if ($showScroll): ?>
     <div class="scroll-hint">
-      <i data-lucide="mouse" style="width: 18px; height: 24px;"></i>
+      <i class="ph-light ph-mouse" style="font-size: 24px;"></i>
       <span><?= htmlspecialchars($scrollText, ENT_QUOTES, 'UTF-8') ?></span>
     </div>
   <?php endif; ?>

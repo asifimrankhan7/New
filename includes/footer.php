@@ -67,9 +67,9 @@
                     <p><a href="mailto:info@aaron-holmes.co.uk">info@aaron-holmes.co.uk</a></p>
                 </address>
                 <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ph-light ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ph-light ph-twitter-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph-light ph-instagram-logo"></i></a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
 
 <!-- BACK TO TOP -->
 <div id="btt" title="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-  <i data-lucide="chevron-up"></i>
+  <i class="ph-light ph-caret-up"></i>
 </div>
 
 <!-- TOAST -->
@@ -103,7 +103,7 @@
 <div id="cookie-dialog" class="cookie-dialog">
   <div class="cookie-content">
     <div class="cookie-header">
-      <i data-lucide="cookie" class="cookie-icon"></i>
+      <i class="ph-light ph-cookie cookie-icon"></i>
       <h3 class="serif">Cookie Policy</h3>
       <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
     </div>

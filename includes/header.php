@@ -42,7 +42,7 @@
   <div class="topbar">
     <div class="wrap">
       <div class="topbar-left">
-        <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+        <i class="ph-light ph-globe" style="font-size: 14px;"></i>
         <span>United Kingdom</span>
       </div>
       <div class="topbar-right">

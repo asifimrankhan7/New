@@ -135,27 +135,27 @@
               <img src="<?= $p['img'] ?>" alt="<?= $p['name'] ?>" loading="lazy" />
               <span class="prop-badge"><?= $p['status'] ?></span>
               <div class="prop-fav" onclick="toggleFav(event,this)">
-                <i data-lucide="heart"></i>
+                <i class="ph-light ph-heart"></i>
               </div>
             </div>
             <div class="prop-body">
               <div class="prop-price serif"><?= $p['price'] ?></div>
               <div class="prop-name"><?= $p['name'] ?></div>
               <div class="prop-loc">
-                <i data-lucide="map-pin" style="width:11px;height:11px;margin-right:4px"></i>
+                <i class="ph-light ph-map-pin" style="font-size: 14px; margin-right: 4px;"></i>
                 <?= $p['loc'] ?>
               </div>
               <div class="prop-meta">
                 <span class="prop-meta-item">
-                  <i data-lucide="bed" style="width:13px;height:13px;margin-right:4px"></i>
+                  <i class="ph-light ph-bed" style="font-size: 16px; margin-right: 4px;"></i>
                   <?= $p['beds'] ?> beds
                 </span>
                 <span class="prop-meta-item">
-                  <i data-lucide="bath" style="width:13px;height:13px;margin-right:4px"></i>
+                  <i class="ph-light ph-bathtub" style="font-size: 16px; margin-right: 4px;"></i>
                   <?= $p['baths'] ?> baths
                 </span>
                 <span class="prop-meta-item">
-                  <i data-lucide="maximize-2" style="width:13px;height:13px;margin-right:4px"></i>
+                  <i class="ph-light ph-corners-out" style="font-size: 16px; margin-right: 4px;"></i>
                   <?= $p['sqft'] ?> sq ft
                 </span>
               </div>

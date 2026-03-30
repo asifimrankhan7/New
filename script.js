@@ -176,13 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
           edgePadding: 0
         });
       }
-      if (window.lucide) {
-        lucide.createIcons({
-          attrs: {
-            'stroke-width': 1.2
-          }
-        });
-      }
       setTimeout(() => { if (l) l.remove(); }, 700);
     }, 1800);
   });
