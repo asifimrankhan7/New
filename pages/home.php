@@ -338,45 +338,50 @@
           What Our Clients Say
         </h2>
       </div>
-      <div class="testimonials-slider">
-        <div class="tes-track" id="tes-track">
-          <div class="tes-slide">
-            <p class="tes-quote">
-              "Aaron Holmes sold our family home in Gants Hill within two weeks,
-              achieving above the asking price. Their knowledge of the local
-              market is second to none."
-            </p>
-            <p class="tes-author">— Mr & Mrs Patel, Gants Hill IG2</p>
-          </div>
-          <div class="tes-slide">
-            <p class="tes-quote">
-              "As a first-time buyer I was anxious, but the team guided me
-              through every step. They were always available and made the
-              whole process stress-free."
-            </p>
-            <p class="tes-author">— James O., Ilford IG1</p>
-          </div>
-          <div class="tes-slide">
-            <p class="tes-quote">
-              "Aaron has managed my Barking rental portfolio for years.
-              Reliable, professional, and genuinely invested in getting the
-              best for both landlords and tenants."
-            </p>
-            <p class="tes-author">— Landlord client, Barking IG11</p>
-          </div>
-          <div class="tes-slide">
-            <p class="tes-quote">
-              "We relocated from overseas and Aaron Holmes made finding our
-              new home in Barkingside completely seamless. Outstanding service
-              from start to finish."
-            </p>
-            <p class="tes-author">— The Okonkwo Family, Barkingside IG6</p>
-          </div>
+      <div class="testimonials-slider" id="testimonials-slider">
+        <div class="tes-slide">
+          <p class="tes-quote">
+            "Aaron Holmes sold our family home in Gants Hill within two weeks,
+            achieving above the asking price. Their knowledge of the local
+            market is second to none."
+          </p>
+          <p class="tes-author">— Mr & Mrs Patel, Gants Hill IG2</p>
         </div>
-        <div class="tes-dots" id="tes-dots"></div>
-        <div class="tes-arrows">
-          <div class="tes-arrow" onclick="tesPrev()">‹</div>
-          <div class="tes-arrow" onclick="tesNext()">›</div>
+        <div class="tes-slide">
+          <p class="tes-quote">
+            "As a first-time buyer I was anxious, but the team guided me
+            through every step. They were always available and made the
+            whole process stress-free."
+          </p>
+          <p class="tes-author">— James O., Ilford IG1</p>
+        </div>
+        <div class="tes-slide">
+          <p class="tes-quote">
+            "Aaron has managed my Barking rental portfolio for years.
+            Reliable, professional, and genuinely invested in getting the
+            best for both landlords and tenants."
+          </p>
+          <p class="tes-author">— Landlord client, Barking IG11</p>
+        </div>
+        <div class="tes-slide">
+          <p class="tes-quote">
+            "We relocated from overseas and Aaron Holmes made finding our
+            new home in Barkingside completely seamless. Outstanding service
+            from start to finish."
+          </p>
+          <p class="tes-author">— The Okonkwo Family, Barkingside IG6</p>
+        </div>
+      </div>
+      <div class="tes-controls">
+        <div class="tes-arrows" id="tes-arrows">
+          <div class="tes-arrow prev"><i data-lucide="chevron-left"></i></div>
+          <div class="tes-arrow next"><i data-lucide="chevron-right"></i></div>
+        </div>
+        <div class="tes-dots" id="tes-dots">
+          <button aria-label="Slide 1"></button>
+          <button aria-label="Slide 2"></button>
+          <button aria-label="Slide 3"></button>
+          <button aria-label="Slide 4"></button>
         </div>
       </div>
     </div>

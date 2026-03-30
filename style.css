@@ -1277,14 +1277,8 @@ section {
 /* ===================== TESTIMONIALS ===================== */
 .testimonials-slider {
   position: relative;
-  overflow: hidden;
-}
-.tes-track {
-  display: flex;
-  transition: transform 0.5s var(--ease);
 }
 .tes-slide {
-  min-width: 100%;
   padding: 0 60px;
   text-align: center;
 }
@@ -1303,28 +1297,35 @@ section {
   text-transform: uppercase;
   color: var(--gold);
 }
+.tes-controls {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 .tes-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 28px;
 }
-.tes-dot {
+.tes-dots button {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+  border: none;
   background: rgba(255, 255, 255, 0.25);
   cursor: pointer;
+  padding: 0;
   transition: background 0.2s;
 }
-.tes-dot.on {
+.tes-dots .tns-nav-active {
   background: var(--gold);
 }
 .tes-arrows {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 16px;
 }
 .tes-arrow {
   width: 40px;

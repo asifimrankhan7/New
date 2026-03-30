@@ -30,7 +30,9 @@ if (!array_key_exists($currentPage, $allowedPages)) {
 		rel="stylesheet" />
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.css" />
-	<script src="https://unpkg.com/lucide@latest"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.js"></script>
 	<script src="script.js" defer></script>
 	<script type="module">
 		import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.js';

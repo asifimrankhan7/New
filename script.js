@@ -21,43 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
 
-  /* ===== TESTIMONIALS ===== */
-  let tesIdx = 0;
-
-  function initTes() {
-    const track = document.getElementById("tes-track");
-    if (!track) return;
-    const slides = track.querySelectorAll(".tes-slide");
-    const dots   = document.getElementById("tes-dots");
-    if (!dots || !slides.length) return;
-
-    slides.forEach((_, i) => {
-      const d = document.createElement("div");
-      d.className = "tes-dot" + (i === 0 ? " on" : "");
-      d.onclick = () => window.goTes(i);
-      dots.appendChild(d);
-    });
-
-    setInterval(() => window.tesNext(), 5000);
-  }
-
-  window.goTes = function (i) {
-    tesIdx = i;
-    const track = document.getElementById("tes-track");
-    if (!track) return;
-    track.style.transform = `translateX(-${i * 100}%)`;
-    document.querySelectorAll(".tes-dot").forEach((d, j) => d.classList.toggle("on", j === i));
-  };
-
-  window.tesNext = function () {
-    const slides = document.querySelectorAll(".tes-slide");
-    window.goTes((tesIdx + 1) % slides.length);
-  };
-
-  window.tesPrev = function () {
-    const slides = document.querySelectorAll(".tes-slide");
-    window.goTes((tesIdx - 1 + slides.length) % slides.length);
-  };
 
   /* ===== SEARCH TABS ===== */
   document.querySelectorAll(".stab").forEach(t => {
@@ -186,7 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ===== BOOT ===== */
-  initTes();
 
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -196,11 +158,31 @@ document.addEventListener("DOMContentLoaded", () => {
       initReveal();
       initCookie();
       
-      if (window.lucide) lucide.createIcons({
+      // Initialize Tiny Slider
+      if (document.getElementById("testimonials-slider")) {
+        tns({
+          container: '#testimonials-slider',
+          items: 1,
+          slideBy: 'page',
+          nav: true,
+          controls: true,
+          autoplay: true,
+          autoplayButtonOutput: false,
+          controlsContainer: '#tes-arrows',
+          navContainer: '#tes-dots',
+          mouseDrag: true,
+          gutter: 0,
+          speed: 800,
+          edgePadding: 0
+        });
+      }
+      if (window.lucide) {
+        lucide.createIcons({
           attrs: {
-            'stroke-width': 1.2 // default is 2
+            'stroke-width': 1.2
           }
-      });
+        });
+      }
       setTimeout(() => { if (l) l.remove(); }, 700);
     }, 1800);
   });
