@@ -880,6 +880,9 @@ section {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
 }
+.glightbox.prop-thumb {
+  display: block;
+}
 .prop-thumb {
   position: relative;
   height: 248px;
@@ -1129,6 +1132,9 @@ section {
   grid-template-rows: 240px 240px;
   gap: 4px;
 }
+.glightbox.gallery-item {
+  display: block;
+}
 .gallery-item {
   overflow: hidden;
   cursor: pointer;
@@ -1172,53 +1178,8 @@ section {
   transform: translateY(0);
 }
 
-/* ===================== LIGHTBOX ===================== */
-#lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.95);
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-#lightbox.on {
-  display: flex;
-}
-#lightbox img {
-  max-width: 90vw;
-  max-height: 85vh;
-  object-fit: contain;
-}
-#lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  color: var(--white);
-  font-size: 28px;
-  cursor: pointer;
-  line-height: 1;
-}
-#lightbox-prev,
-#lightbox-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--white);
-  font-size: 36px;
-  cursor: pointer;
-  padding: 0 20px;
-  background: rgba(255, 255, 255, 0.05);
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-#lightbox-prev {
-  left: 0;
-}
-#lightbox-next {
-  right: 0;
-}
+
+/* ===================== INSIGHTS ===================== */
 
 /* ===================== INSIGHTS ===================== */
 .insights-grid {
@@ -2366,8 +2327,8 @@ section {
 
 .cookie-icon {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   color: var(--gold);
   margin-bottom: 16px;
 }
@@ -2388,8 +2349,37 @@ section {
 
 .cookie-footer {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: flex-end;
+}
+
+.cookie-footer button {
+  padding: 10px 20px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#cookie-accept {
+  background: var(--gold);
+  color: var(--white);
+}
+
+#cookie-accept:hover {
+  background: #a07a3e;
+}
+
+#cookie-decline {
+  background: var(--border);
+  color: var(--gray-dark);
+}
+
+#cookie-decline:hover {
+  background: #e0e0e0;
 }
 
 /* ===================== BACK TO TOP ===================== */
@@ -2441,4 +2431,3 @@ section {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-

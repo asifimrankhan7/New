@@ -112,18 +112,18 @@
           Handpicked homes across the country's finest locations
         </p>
       </div>
-      <div class="props-grid" id="featured-props">
+      <div class="props-grid" id="featured-gallery">
         <?php
         $featured = array_slice($PROPERTIES, 0, 3);
         foreach ($featured as $p):
           ?>
-          <div class="prop-card reveal" onclick="toast('Viewing: <?= addslashes($p['name']) ?>')">
-            <div class="prop-thumb">
+          <div class="prop-card reveal">
+            <a href="<?= $p['img'] ?>" class="prop-thumb gallery-link" data-pswp-width="1200" data-pswp-height="800">
               <img src="<?= $p['img'] ?>" alt="<?= $p['name'] ?>" loading="lazy" />
               <span class="prop-badge"><?= $p['status'] ?></span>
-              <div class="prop-fav" onclick="toggleFav(event,this)">
-                <i data-lucide="heart"></i>
-              </div>
+            </a>
+            <div class="prop-fav" onclick="toggleFav(event,this)">
+              <i data-lucide="heart"></i>
             </div>
             <div class="prop-body">
               <div class="prop-price serif"><?= $p['price'] ?></div>
@@ -286,12 +286,12 @@
         </p>
       </div>
     </div>
-    <div class="gallery" id="gallery-grid">
+    <div class="gallery" id="portfolio-gallery">
       <?php foreach ($GALLERY_IMGS as $index => $img): ?>
-        <div class="gallery-item">
-          <img src="<?= $img['url'] ?>" alt="<?= $img['label'] ?>" loading="lazy" onclick="openLightbox(<?= $index ?>)" />
+        <a href="<?= $img['url'] ?>" class="gallery-item gallery-link" data-pswp-width="1600" data-pswp-height="1200">
+          <img src="<?= $img['url'] ?>" alt="<?= $img['label'] ?>" loading="lazy" />
           <div class="gallery-caption"><span><?= $img['label'] ?></span></div>
-        </div>
+        </a>
       <?php endforeach; ?>
     </div>
   </section>

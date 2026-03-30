@@ -29,17 +29,22 @@ if (!array_key_exists($currentPage, $allowedPages)) {
 		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="style.css" />
-	<script>
-		// Gallery data needed by the lightbox in script.js
-		window.GALLERY_IMGS = <?= json_encode($GALLERY_IMGS) ?>;
-	</script>
+	<link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.css" />
 	<script src="https://unpkg.com/lucide@latest"></script>
 	<script src="script.js" defer></script>
+	<script type="module">
+		import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.js';
+		const lightbox = new PhotoSwipeLightbox({
+			gallery: '#featured-gallery, #portfolio-gallery',
+			children: 'a.gallery-link',
+			pswpModule: () => import('https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.esm.js')
+		});
+		lightbox.init();
+	</script>
 </head>
 
 <body>
 	<?php include 'includes/header.php'; ?>
-
 	<?php include $allowedPages[$currentPage]; ?>
 	<?php include 'includes/footer.php'; ?>
 </body>

@@ -1,7 +1,5 @@
 /* =====================================================
    Aaron Holmes Residential — main script
-   GALLERY_IMGS is injected as a global JS variable
-   by PHP in header.php (used by the lightbox).
    ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,34 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(tick);
   })();
 
-  /* ===== LIGHTBOX ===== */
-  let lbIdx = 0;
-
-  window.openLightbox = function (i) {
-    lbIdx = i;
-    document.getElementById("lightbox").classList.add("on");
-    document.getElementById("lb-img").src = GALLERY_IMGS[i].url;
-  };
-
-  window.closeLightbox = function () {
-    document.getElementById("lightbox").classList.remove("on");
-  };
-
-  window.lbNext = function () {
-    lbIdx = (lbIdx + 1) % GALLERY_IMGS.length;
-    document.getElementById("lb-img").src = GALLERY_IMGS[lbIdx].url;
-  };
-
-  window.lbPrev = function () {
-    lbIdx = (lbIdx - 1 + GALLERY_IMGS.length) % GALLERY_IMGS.length;
-    document.getElementById("lb-img").src = GALLERY_IMGS[lbIdx].url;
-  };
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape")     window.closeLightbox();
-    if (e.key === "ArrowRight") window.lbNext();
-    if (e.key === "ArrowLeft")  window.lbPrev();
-  });
 
   /* ===== TESTIMONIALS ===== */
   let tesIdx = 0;
@@ -214,14 +184,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("cookie-decline")?.addEventListener("click", () => close("Cookies declined"));
   }
 
-  /* ===== LIGHTBOX HTML ===== */
-  document.body.insertAdjacentHTML("beforeend", `
-<div id="lightbox">
-  <span id="lightbox-close" onclick="closeLightbox()">&#x2715;</span>
-  <div id="lightbox-prev" onclick="lbPrev()">&#x2039;</div>
-  <img id="lb-img" src="" alt="Gallery image"/>
-  <div id="lightbox-next" onclick="lbNext()">&#x203A;</div>
-</div>`);
 
   /* ===== BOOT ===== */
   initTes();
@@ -233,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       countUp();
       initReveal();
       initCookie();
+      
       if (window.lucide) lucide.createIcons({
           attrs: {
             'stroke-width': 1.2 // default is 2
