@@ -26,13 +26,34 @@
     <span class="mob-close" onclick="closeMob()">✕</span>
   </div>
   <nav class="mob-nav">
-    <a href="<?= $routeBase ?>home">Home</a>
-    <a href="<?= $routeBase ?>properties">For Sale</a>
-    <a href="<?= $routeBase ?>contact">Lettings</a>
-    <a href="<?= $routeBase ?>about">About Us</a>
-    <a href="<?= $routeBase ?>offices">Consultant & Mentorship</a>
-    <a href="<?= $routeBase ?>insights">Testimonial</a>
-    <a href="<?= $routeBase ?>contact">Contact Us</a>
+    <div class="mob-nav-item">
+      <a href="<?= $routeBase ?>home">Home</a>
+    </div>
+    <div class="mob-nav-item">
+      <a href="<?= $routeBase ?>properties">Properties</a>
+    </div>
+    <div class="mob-nav-item has-mob-dropdown">
+      <div class="mob-nav-link-wrap">
+        <a href="<?= $routeBase ?>contact">Services</a>
+        <span class="mob-drop-trigger"><i class="ph-light ph-caret-down"></i></span>
+      </div>
+      <div class="mob-dropdown">
+        <a href="<?= $routeBase ?>properties">Residential Sales</a>
+        <a href="<?= $routeBase ?>contact">Lettings</a>
+        <a href="<?= $routeBase ?>contact">Mortgages</a>
+        <a href="<?= $routeBase ?>contact">Conveyancing</a>
+        <a href="<?= $routeBase ?>offices">Consultant & Mentorship</a>
+      </div>
+    </div>
+    <div class="mob-nav-item">
+      <a href="<?= $routeBase ?>insights">Insights</a>
+    </div>
+    <div class="mob-nav-item">
+      <a href="<?= $routeBase ?>about">About Us</a>
+    </div>
+    <div class="mob-nav-item">
+      <a href="<?= $routeBase ?>contact">Contact</a>
+    </div>
   </nav>
 </div>
 

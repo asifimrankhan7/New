@@ -47,6 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   };
 
+  /* ===== MOBILE MENU DROPDOWN ===== */
+  document.querySelectorAll(".mob-drop-trigger").forEach(trig => {
+    trig.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const parent = this.closest(".mob-nav-item");
+      if (parent) parent.classList.toggle("open");
+    });
+  });
+
   /* ===== FAVOURITES ===== */
   window.toggleFav = function (e, el) {
     e.stopPropagation();

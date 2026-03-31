@@ -5,7 +5,7 @@
     <div class="hero-video-wrap">
       <video autoplay muted loop playsinline
         poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=60">
-        <source src="Vidio.mp4" type="video/mp4" />
+        <source src="videos/home-hero-v1.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="hero-overlay"></div>
